@@ -1,0 +1,18 @@
+USE master
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'Budget')
+	BEGIN
+		CREATE DATABASE Budget
+			CONTAINMENT = NONE
+			COLLATE SQL_Latin1_General_CP1_CI_AS
+	END
+ELSE 
+	BEGIN 
+		DROP DATABASE Budget
+	
+		CREATE DATABASE Budget
+			CONTAINMENT = NONE
+			COLLATE SQL_Latin1_General_CP1_CI_AS
+	END 
+;
+
+GO

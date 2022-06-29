@@ -1,0 +1,1286 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/29/2022 3:46:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BDNF0K4"
+  DTS:CreatorName="DESKTOP-BDNF0K4\Dzmitry"
+  DTS:DTSID="{F0F10A6A-933A-4EF3-B38E-74DBE7BD0955}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="8192"
+  DTS:ObjectName="BudgetIntegration"
+  DTS:PackageType="5"
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{65BBDEF5-5AAC-4B32-977B-BF9902E4DF46}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV Prior]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C43600F3-2EF1-4CFF-947F-B4D191F685BB}"
+      DTS:ObjectName="CSV Prior">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1251"
+          DTS:ConnectionString="G:\Budget\DB\Vpsk_69904447.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Дата транзакции"
+              DTS:DTSID="{D528668A-C2E3-4EF9-B074-35F048AA6649}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Операция"
+              DTS:DTSID="{EA10B062-8327-4C92-9777-01F1973EC915}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Сумма"
+              DTS:DTSID="{23A1294D-CC72-481D-AD4D-C896DDDFF03C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Валюта"
+              DTS:DTSID="{6B5E50E0-BB6A-41D5-ABBA-60A8D70C7369}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Дата операции по счету"
+              DTS:DTSID="{12770EDD-ED07-4AAD-90B0-D38751E66A24}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Комиссия Money-back"
+              DTS:DTSID="{89C0E085-F9DD-4697-8355-49716152BF80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Обороты по счету"
+              DTS:DTSID="{9A6D1A4F-DABC-41BF-A02D-3697FB85F0CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Цифровая карта"
+              DTS:DTSID="{27BD2614-B414-4505-BFCB-23A7AD2D725B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Категория операции"
+              DTS:DTSID="{D9B3EE8C-28E8-44CB-B9BC-886D5EA278D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Столбец 9"
+              DTS:DTSID="{B824855E-3594-4AF8-A85A-AFE9474D148D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{36BA8DB3-4AC4-4BD0-BFFC-B21572E42AF1}"
+      DTS:ObjectName="DESKTOP-BDNF0K4\SQLEXPRESS.Budget">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-BDNF0K4\SQLEXPRESS;Initial Catalog=Budget;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="2"
+      DTS:DTSID="{C59D62C0-E0CC-4BB3-AC0E-3FB17A53B5EF}"
+      DTS:ObjectName="CARDACC_ID">
+      <DTS:Property
+        DTS:DataType="2"
+        DTS:Name="ParameterValue">1</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Задача потока данных"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{FC7EBC66-6EB9-4C96-A29C-4E1395DF3A5D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача потока данных">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Задача потока данных\Budget DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Budget DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[TRANSACTIONS]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+ACCOUNT_ID
+, CARD_ID
+, TXN_AMOUNT
+, TXN_CURRENCY
+, TXN_CATEGORY
+, TXN_DESCR
+, TXN_DATE
+from dbo.transactions</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Budget DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Сумма]"
+                      cachedDataType="decimal"
+                      cachedName="Сумма"
+                      externalMetadataColumnId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_AMOUNT]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Сумма]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Валюта]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Валюта"
+                      externalMetadataColumnId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_CURRENCY]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Валюта]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Операция]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Операция"
+                      externalMetadataColumnId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_DESCR]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Операция]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Дата транзакции]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Дата транзакции"
+                      externalMetadataColumnId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_DATE]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Дата транзакции]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Категория операции]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Категория операции"
+                      externalMetadataColumnId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_CATEGORY]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Категория операции]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Account_ID]"
+                      cachedDataType="i2"
+                      cachedName="Account_ID"
+                      externalMetadataColumnId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ACCOUNT_ID]"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Account_ID]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Card_ID]"
+                      cachedDataType="i2"
+                      cachedName="Card_ID"
+                      externalMetadataColumnId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CARD_ID]"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Card_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_AMOUNT]"
+                      dataType="numeric"
+                      name="TXN_AMOUNT"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_CURRENCY]"
+                      dataType="wstr"
+                      length="3"
+                      name="TXN_CURRENCY" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_CATEGORY]"
+                      dataType="wstr"
+                      length="255"
+                      name="TXN_CATEGORY" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_DESCR]"
+                      dataType="wstr"
+                      length="255"
+                      name="TXN_DESCR" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_DATE]"
+                      dataType="dbDate"
+                      name="TXN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ACCOUNT_ID]"
+                      dataType="i2"
+                      name="ACCOUNT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CARD_ID]"
+                      dataType="i2"
+                      name="CARD_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_TYPE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TXN_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_MCC]"
+                      dataType="i2"
+                      name="TXN_MCC" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TRANSFER_FROM]"
+                      dataType="i2"
+                      name="TRANSFER_FROM" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TRANSFER_TO]"
+                      dataType="i2"
+                      name="TRANSFER_TO" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Budget DB.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Budget DB.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Budget DB.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Budget DB.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Budget DB.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Error table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Error table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[Error table]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Error table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorCode]"
+                      name="ErrorCode" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ErrorText]"
+                      dataType="wstr"
+                      length="255"
+                      name="ErrorText" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Error table.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Error table.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCd]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Error table.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCd]"
+                      name="ErrorCd"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Error table.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorC]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Error table.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorC]"
+                      name="ErrorC"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Prior BYN ZP"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Источник &quot;Неструктурированный файл&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Источник &quot;Неструктурированный файл&quot;"
+              localeId="8192"
+              name="Prior BYN ZP"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, считается ли, что столбцы нулевой длины имеют значение NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя файла выходного столбца, содержащего имя файла. Если не указано имя, выходной столбец, содержащий имя файла, не будет сформирован."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Prior BYN ZP.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CSV Prior]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV Prior]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;]"
+                  name="Выход источника &quot;Неструктурированный файл&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Дата транзакции]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Дата транзакции]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Дата транзакции]"
+                      name="Дата транзакции"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Операция]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Операция]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Операция]"
+                      name="Операция"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Сумма]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Сумма]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Сумма]"
+                      name="Сумма"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Валюта]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Валюта]"
+                      length="3"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Валюта]"
+                      name="Валюта"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Обороты по счету]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Обороты по счету]"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Обороты по счету]"
+                      name="Обороты по счету"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Категория операции]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Категория операции]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Категория операции]"
+                      name="Категория операции"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Дата транзакции]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Дата транзакции" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Операция]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Операция" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Сумма]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Сумма" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Валюта]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Валюта" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Дата операции по счету]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Дата операции по счету" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Комиссия Money-back]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Комиссия Money-back" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Обороты по счету]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Обороты по счету" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Цифровая карта]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Цифровая карта" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Категория операции]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Категория операции" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Столбец 9]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Столбец 9" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;Неструктурированный файл&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;]"
+                      codePage="1251"
+                      dataType="text"
+                      description="Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;]"
+                      name="Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\strings_to_types"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Преобразование данных;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Преобразование данных"
+              name="strings_to_types"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных]"
+                  name="Входные данные преобразования данных">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных].Columns[Дата транзакции]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Дата транзакции"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Дата транзакции]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных].Columns[Операция]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Операция"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Операция]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных].Columns[Сумма]"
+                      cachedDataType="decimal"
+                      cachedName="Сумма"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Сумма]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных].Columns[Валюта]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Валюта"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Валюта]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных].Columns[Категория операции]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Категория операции"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Категория операции]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных].Columns[Обороты по счету]"
+                      cachedDataType="i2"
+                      cachedName="Обороты по счету"
+                      lineageId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Обороты по счету]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных]"
+                  exclusionGroup="1"
+                  name="Выходные данные преобразования данных"
+                  synchronousInputId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Дата транзакции]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Дата транзакции]"
+                      name="Копия Дата транзакции"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника "Неструктурированный файл"].Columns[Дата транзакции]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Операция]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Операция]"
+                      name="Копия Операция"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника "Неструктурированный файл"].Columns[Операция]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Сумма]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Сумма]"
+                      name="Копия Сумма"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника "Неструктурированный файл"].Columns[Сумма]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Валюта]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Валюта]"
+                      name="Копия Валюта"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника "Неструктурированный файл"].Columns[Валюта]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Категория операции]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Копия Категория операции]"
+                      name="Копия Категория операции"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника "Неструктурированный файл"].Columns[Категория операции]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Account_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Account_ID]"
+                      name="Account_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника "Неструктурированный файл"].Columns[Обороты по счету]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Card_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Card_ID]"
+                      name="Card_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника "Неструктурированный файл"].Columns[Обороты по счету]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные ошибок преобразования данных]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Выходные данные ошибок преобразования данных"
+                  synchronousInputId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Производный столбец"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Производный столбец;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Создает новые значения столбцов путем применения выражений к входным столбцам преобразования. Создает новые столбцы или перезаписывает существующие. Пример: объединение значений столбцов &quot;first name&quot; и &quot;last name&quot; и создание столбца &quot;full name&quot;."
+              name="Производный столбец"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Производный столбец.Inputs[Вход производного столбца]"
+                  description="Ввод преобразования &quot;Производный столбец&quot;"
+                  name="Вход производного столбца">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Производный столбец.Inputs[Вход производного столбца].Columns[ACCOUNT_ID]"
+                      cachedDataType="i2"
+                      cachedName="Account_ID"
+                      errorOrTruncationOperation="Вычисление"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Account_ID]"
+                      name="ACCOUNT_ID"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Выражение производного столбца"
+                          name="Expression">@[$Package::CARDACC_ID]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Понятное выражение производного столбца"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[$Package::CARDACC_ID]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Производный столбец.Inputs[Вход производного столбца].Columns[CARD_ID]"
+                      cachedDataType="i2"
+                      cachedName="Card_ID"
+                      errorOrTruncationOperation="Вычисление"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных].Columns[Card_ID]"
+                      name="CARD_ID"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Выражение производного столбца"
+                          name="Expression">@[$Package::CARDACC_ID]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Понятное выражение производного столбца"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[$Package::CARDACC_ID]</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Производный столбец.Outputs[Выход производного столбца]"
+                  description="Выход по умолчанию преобразования &quot;Производный столбец&quot;"
+                  exclusionGroup="1"
+                  name="Выход производного столбца"
+                  synchronousInputId="Package\Задача потока данных\Производный столбец.Inputs[Вход производного столбца]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\Производный столбец.Outputs[Вывод ошибок производного столбца]"
+                  description="Вывод ошибок преобразования &quot;Производный столбец&quot;"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок производного столбца"
+                  synchronousInputId="Package\Задача потока данных\Производный столбец.Inputs[Вход производного столбца]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Производный столбец.Outputs[Вывод ошибок производного столбца].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Производный столбец.Outputs[Вывод ошибок производного столбца].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Производный столбец.Outputs[Вывод ошибок производного столбца].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Производный столбец.Outputs[Вывод ошибок производного столбца].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Задача потока данных.Paths[Data source errors]"
+              endId="Package\Задача потока данных\Error table.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Data source errors"
+              startId="Package\Задача потока данных\Prior BYN ZP.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
+              endId="Package\Задача потока данных\strings_to_types.Inputs[Входные данные преобразования данных]"
+              name="Выход источника &quot;Неструктурированный файл&quot;"
+              startId="Package\Задача потока данных\Prior BYN ZP.Outputs[Выход источника &quot;Неструктурированный файл&quot;]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выход производного столбца]"
+              endId="Package\Задача потока данных\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход производного столбца"
+              startId="Package\Задача потока данных\Производный столбец.Outputs[Выход производного столбца]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выходные данные преобразования данных]"
+              endId="Package\Задача потока данных\Производный столбец.Inputs[Вход производного столбца]"
+              name="Выходные данные преобразования данных"
+              startId="Package\Задача потока данных\strings_to_types.Outputs[Выходные данные преобразования данных]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\Задача потока данных"
+          TopLeft="65.5,65.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Задача потока данных">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Задача потока данных\Prior BYN ZP"
+          TopLeft="505,75" />
+        <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\Задача потока данных\Budget DB"
+          TopLeft="372.5,541.5" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\Задача потока данных\Error table"
+          TopLeft="1045,69" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Data source errors]"
+          TopLeft="645.8,92.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="399.200000000001,0"
+              Start="0,0"
+              End="391.700000000001,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="391.700000000001,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="154.427421875,5,82.84515625,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Задача потока данных\strings_to_types"
+          TopLeft="362,249" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
+          TopLeft="575.4,116.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-136.2,132.4"
+              Start="0,0"
+              End="-136.2,124.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.2"
+                    Point2="0,66.2"
+                    Point3="-4,66.2" />
+                  <mssgle:LineSegment
+                    End="-132.2,66.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-132.2,66.2"
+                    Point2="-136.2,66.2"
+                    Point3="-136.2,70.2" />
+                  <mssgle:LineSegment
+                    End="-136.2,124.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Задача потока данных\Производный столбец"
+          TopLeft="343,364" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выходные данные преобразования данных]"
+          TopLeft="437.9,290.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.4"
+              Start="0,0"
+              End="0,65.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход производного столбца]"
+          TopLeft="436.75,405.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,135.9"
+              Start="0,0"
+              End="0,128.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,128.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\Budget DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\Error table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,36 @@
+
+alter table dbo.transactions
+alter column account_id smallint;
+
+
+select * from CARDS
+
+alter table dbo.accounts
+alter column id smallint;
+
+insert into dbo.ACCOUNTS values (
+'Salary BYN', 'BY20PJCB30141130081014363933',0,'Priorbank', 'BYN');
+insert into dbo.CARDS values (
+'Salary BYN', '3709');
+
+
+	SET IDENTITY_INSERT transactions ON;
+
+
+	ALTER TABLE DBO.TRANSACTIONS
+	ALTER COLUMN TRANSFER_FROM SMALLINT NULL;
+
+	ALTER TABLE DBO.TRANSACTIONS
+	ALTER COLUMN TRANSFER_TO SMALLINT NULL;
+
+	ALTER TABLE DBO.TRANSACTIONS
+	ALTER COLUMN TXN_MCC SMALLINT NULL;
+
+	ALTER TABLE DBO.TRANSACTIONS
+	ALTER COLUMN TXN_TYPE NVARCHAR(255) NULL;
+
+
+	ALTER TABLE [dbo].[TRANSACTIONS]  DROP constraint CK__TRANSACTI__TXN_A__6A30C649
+
+
+	select * from TRANSACTIONS

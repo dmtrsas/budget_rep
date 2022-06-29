@@ -1,0 +1,9 @@
+go
+
+use Budget
+
+CREATE TABLE CARDS (
+ID smallint PRIMARY KEY IDENTITY (1,1) NOT NULL,
+CARD_NAME nvarchar(255) NOT NULL,
+CARD_NUMBER nvarchar (255) NOT NULL
+);
