@@ -13,34 +13,77 @@ def getstatementslist():
         else:
             statement = statement.group(0)
             statements_list.append(statement)
+    return statements_list
 
 
-def priorstatementparse(filename):
+def getcardnumber(filename):
     with open(filename) as source_csv:
         source_csv_read = csv.reader(source_csv, delimiter=';')
-        i = 0  # entries iterator
-        trunc_source_csv = [
-            ['Операция', 'Сумма', 'Валюта', 'Дата операции по счету',
-             'Комиссия/Money-back',
-             'Обороты по счету', 'Цифровая карта', 'Категория операции', '', 'Дата транзакции', 'Время транзакции']]
-        for row in source_csv_read:
+        pan = ''
+        for entry in source_csv_read:
+            if not entry or re.search('Карта:', entry[0]) is None:
+                pass
+            else:
+                pan = entry[1][8:12:]
+                return pan
 
-            if not row or len(row) != 10:
+
+def getcurbill(filename):
+    with open(filename) as source_csv:
+        source_csv_read = csv.reader(source_csv, delimiter=';')
+        curbill = ''
+        for entry in source_csv_read:
+            if not entry or re.search('Валюта счета: ', entry[0]) is None:
+                pass
+            else:
+                curbill = entry[1]
+                return curbill
+
+
+def priorstatementparse(filename, pan, curbill):
+    with open(filename) as source_csv:
+        source_csv_read = csv.reader(source_csv, delimiter=';')
+
+        # inserting rows into file
+        i = 0  # entries iterator
+        source_csv_rows = []
+        source_csv_read = csv.reader(source_csv, delimiter=';')
+        for row in source_csv_read:
+            if not row or len(row) != 10:  # every row with necessary data in a source file contains 10 elements
                 i += 1
             else:
                 if bool(re.search('[а-яА-Я]', row[0])) is False:
+                    # 8th column contains unnecessary symbol
+                    row[8] = row[8].replace('\xa0', '')
+                    # datetime column split into date and time
                     row[0] = row[0].split(' ')
                     datetime = row[0]
-                    row.append(datetime[0])  # extract date from datetime column
-                    row.append(datetime[1])  # extract time from datetime column
-                    row.remove(row[0])  # remove datetime column
-                    row[7] = row[7].replace('\xa0', '')
-                    # 7th element of many rows (after datetime column removal)
-                    # contains unnecessary symbol
-                    trunc_source_csv.append(row)
+                    row.insert(1, datetime[0])
+                    row.insert(2, datetime[1])
+                    row.remove(row[0])
+                    # empty column replaced with "category" column
+                    category = row[-1]
+                    row.insert(-2, category)
+                    row.remove(row[-1])
+                    row.remove(row[-3])
+                    # insert card number and billing currency
+                    row.insert(-2, pan)
+                    row.insert(-3, curbill)
+                    # append only needed elements
+                    source_csv_rows.append(row[:11:])
         i += 1
-    with open('vpsk_res.csv', 'a') as target_csv:
-        for row in trunc_source_csv:
+        # writing rows to a file
+    with open('Result.csv', 'a') as target_csv:
+        for row in source_csv_rows:
             for elem in row:
                 elem = ";".join(elem)
             target_csv.writelines("%s\n" % str(row))
+
+
+with open('Result.csv', 'a') as target_csv:  # writing header to a result file
+    target_csv.writelines("%s\n" % str(
+        ['Transaction date', 'Transaction time', 'Transaction description',
+         'Transaction Amount', 'Currency', 'Account Date', 'Account Number',
+         'Billing amount', 'Billing currency', 'Card Number', 'Category']))
+for filename in getstatementslist():
+    priorstatementparse(filename, getcardnumber(filename), getcurbill(filename))
