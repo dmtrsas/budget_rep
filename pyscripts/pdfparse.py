@@ -16,16 +16,16 @@ def getstatementslist():
     return statements_list
 
 
-def getcardnumber(filename):
-    with open(filename) as source_csv:
-        source_csv_read = csv.reader(source_csv, delimiter=';')
-        pan = ''
-        for entry in source_csv_read:
-            if not entry or re.search('Карта:', entry[0]) is None:
-                pass
-            else:
-                pan = entry[1][8:12:]
-                return pan
+# def getcardnumber(filename):
+#     with open(filename) as source_csv:
+#         source_csv_read = csv.reader(source_csv, delimiter=';')
+#         pan = ''
+#         for entry in source_csv_read:
+#             if not entry or re.search('Карта:', entry[0]) is None:
+#                 pass
+#             else:
+#                 pan = entry[1][8:12:]
+#                 return pan
 
 
 def mtbstatementparse(filename):
@@ -33,9 +33,12 @@ def mtbstatementparse(filename):
     pdf_read = PyPDF2.PdfReader(source_pdf)
     num_pages = pdf_read.numPages
     page_no = 0
+    # retrieve account number for further purposes (to match with data in destination DB)
+    account_no = re.search('BY\d{2}MTBK3014\d{16}', pdf_read.getPage(0).extractText()).group(0)
 
     # this is what we do for every page of input PDF file
     while page_no < num_pages:
+
         input_page = ((pdf_read.getPage(page_no)).extractText()).split('\nTранзации')  # extract text + split into pages
         input_page = re.split(('\nT'), input_page[0])  # \nT - the only adequate delimiter for splitting pages into rows
         input_page = input_page[1::]  # first row of a page (which includes service info) is not needed
@@ -70,6 +73,17 @@ def mtbstatementparse(filename):
             else:
                 output_page.append(transaction)
                 txn_num += 1
+
+        for transaction in output_page:
+            transaction_date = transaction[:10:]
+            transaction_time = transaction[11:19:]
+            account_date = transaction[19:29:]
+            card_number = re.search('\d{6}[*]{6}\d{4}', transaction)
+            if card_number is not None:  # if card number found
+                card_number = card_number.group(0)[-4::]
+
+            csv_output_string = [transaction_date, transaction_time, account_date, card_number, account_no]
+            print(csv_output_string)
 
         # Writing to a file
         with open('MResult.csv', 'a') as target_csv:
