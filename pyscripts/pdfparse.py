@@ -33,6 +33,7 @@ def mtbstatementparse(filename):
     pdf_read = PyPDF2.PdfReader(source_pdf)
     num_pages = pdf_read.numPages
     page_no = 0
+
     # this is what we do for every page of input PDF file
     while page_no < num_pages:
         input_page = ((pdf_read.getPage(page_no)).extractText()).split('\nTранзации')  # extract text + split into pages
