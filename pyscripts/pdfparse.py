@@ -7,7 +7,7 @@ def getstatementslist():
     files = os.listdir(os.getcwd())
     statements_list = []
     for i in files:
-        statement = re.match('Transactions\s.\d..pdf', i)
+        statement = re.match(r'Transactions\s.\d..pdf', i)
         if statement is None:
             pass
         else:
@@ -34,13 +34,13 @@ def mtbstatementparse(filename):
     num_pages = pdf_read.numPages
     page_no = 0
     # retrieve account number for further purposes (to match with data in destination DB)
-    account_no = re.search('BY\d{2}MTBK3014\d{16}', pdf_read.getPage(0).extractText()).group(0)
+    account_no = re.search(r'BY\d{2}MTBK3014\d{16}', pdf_read.getPage(0).extractText()).group(0)
 
     # this is what we do for every page of input PDF file
     while page_no < num_pages:
 
         input_page = ((pdf_read.getPage(page_no)).extractText()).split('\nTранзации')  # extract text + split into pages
-        input_page = re.split(('\nT'), input_page[0])  # \nT - the only adequate delimiter for splitting pages into rows
+        input_page = re.split('\nT', input_page[0])  # \nT - the only adequate delimiter for splitting pages into rows
         input_page = input_page[1::]  # first row of a page (which includes service info) is not needed
 
         output_page = []
@@ -52,11 +52,11 @@ def mtbstatementparse(filename):
 
             # Incorrect splitting / last entry handling
             # if there are non-digits in last 4 - it's either real txn first part OR last txn with service info
-            if re.match('\d.\d{2}', transaction[-4::]) is None:
+            if re.match(r'\d.\d{2}', transaction[-4::]) is None:
 
                 # if this transaction is the last
-                if re.search('\sсумма блокирована', str(transaction)) is not None:
-                    transaction = re.split('-\sсумма обработана', transaction)
+                if re.search(r'\sсумма блокирована', str(transaction)) is not None:
+                    transaction = re.split(r'-\sсумма обработана', transaction)
                     transaction = ((str(transaction[:1:]).replace("'", '')).replace("[", '')).replace(']', '')
                 # if this transaction was just split within
                 else:
@@ -66,7 +66,7 @@ def mtbstatementparse(filename):
                 txn_num += 1
 
             # if there are non-digits in first 4 - it's real txn second part
-            elif re.match('\d{2}.\d', transaction[:5:]) is None:
+            elif re.match(r'\d{2}.\d', transaction[:5:]) is None:
                 txn_num += 1
 
             # most entries land here
@@ -78,19 +78,46 @@ def mtbstatementparse(filename):
             transaction_date = transaction[:10:]
             transaction_time = transaction[11:19:]
             account_date = transaction[19:29:]
-            card_number = re.search('\d{6}[*]{6}\d{4}', transaction)
-            if card_number is not None:  # if card number found
-                card_number = card_number.group(0)[-4::]
+            card_accno = re.search(r'\d{6}[*]{6}\d{4}', transaction)
+            if card_accno is not None:  # if card number found
+                card_accno = card_accno.group(0)[-4::]
+            else:
+                card_accno = account_no
+            transaction_descr_category = transaction
 
-            csv_output_string = [transaction_date, transaction_time, account_date, card_number, account_no]
+            # description and category extraction
+            if re.search(r'Комиссия\s', transaction_descr_category) is None \
+                    and re.search(r'Пополнение сч[а-я]та\s', transaction_descr_category) is None:
+                # if entry is not a commission and not a ERIP credit then we take it out:
+                # remove dates and amounts, leave only description and category
+                transaction_descr_category = re.split(str(card_accno),
+                                                      re.split(r'BYN\d|USD\d|EUR\d|RUB\d',
+                                                               transaction_descr_category)[0])
+                transaction_descr_category = transaction_descr_category[1]
+                # taking out description
+                transaction_descr = re.match(r'(.{1,50}[^а-яА-Я]\s[A-Z]{2}\s){1,30}', transaction_descr_category).group(
+                    0)
+                # removing description, only category left
+                transaction_descr_category = transaction_descr_category.replace(transaction_descr, '')
+                transaction_category = transaction_descr_category
+
+            # if entry is a commission or ERIP credit - fill in with constant data
+            else:
+                if re.search(r'Комиссия\s', transaction) is None:
+                    transaction_descr = 'Пополнение счёта ' + account_no
+                    transaction_category = 'Пополнение ЕРИП'
+                else:
+                    transaction_descr = ' '
+                    transaction_category = 'Комиссия по операции'
+
+            csv_output_string = str([transaction_date, transaction_time, account_date, transaction_descr,
+                                     transaction_category, card_accno])
             print(csv_output_string)
 
-        # Writing to a file
-        with open('MResult.csv', 'a') as target_csv:
-            output_page = '\n'.join(output_page)
-            print(output_page)
-            target_csv.writelines(output_page)
-            target_csv.writelines('\n')
+            # Writing to a file
+            with open('MResult.csv', 'a') as target_csv:
+                target_csv.write(csv_output_string)
+                target_csv.write('\n')
 
         page_no += 1
 
