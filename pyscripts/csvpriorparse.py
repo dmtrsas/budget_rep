@@ -7,7 +7,7 @@ def getstatementslist():
     files = os.listdir(os.getcwd())
     statements_list = []
     for i in files:
-        statement = re.match('Vpsk_\d{8}.csv', i)
+        statement = re.match(r'Vpsk_\d{8}.{0,3}\.csv', i)
         if statement is None:
             pass
         else:

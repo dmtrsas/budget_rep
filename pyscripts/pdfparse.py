@@ -7,7 +7,7 @@ def getstatementslist():
     files = os.listdir(os.getcwd())
     statements_list = []
     for i in files:
-        statement = re.match(r'Transactions\s.\d..pdf', i)
+        statement = re.match(r'transactions.{1,2}\d.\.pdf', i)
         if statement is None:
             pass
         else:
