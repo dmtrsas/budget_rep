@@ -44,7 +44,7 @@ def mtbstatementparse(filename):
 
                 # Incorrect splitting / last entry handling
                 # if there are non-digits in last 4 - it's either real txn first part OR last txn with service info
-                if re.match(r'\d.\d{2}', transaction[-4::]) is None:
+                if re.match(r'\d\.\d{2}', transaction[-4::]) is None:
 
                     # if this transaction is the last
                     if re.search(r'\sсумма блокирована', str(transaction)) is not None:
@@ -58,7 +58,7 @@ def mtbstatementparse(filename):
                     txn_num += 1
 
                 # if there are non-digits in first 4 - it's real txn second part
-                elif re.match(r'\d{2}.\d', transaction[:5:]) is None:
+                elif re.match(r'\d{2}\.\d', transaction[:5:]) is None:
                     txn_num += 1
 
                 # most entries land here
@@ -67,11 +67,11 @@ def mtbstatementparse(filename):
                     txn_num += 1
         for transaction in output_page:
             account_date = transaction[19:29:]
-            transaction_date = (re.search(r'\d{2}.\d{2}.\d{4}\s', transaction).group(0)).strip()
+            transaction_date = (re.search(r'\d{2}\.\d{2}\.\d{4}\s', transaction).group(0)).strip()
             transaction = transaction.replace(transaction_date, '')
             transaction_time = (re.search(r'\s\d{2}:\d{2}:\d{2}', transaction).group(0)).strip()
             transaction = transaction.replace(transaction_time, '')
-            card_number = re.search(r'\d{6}[*]{6}\d{4}', transaction)
+            card_number = re.search(r'\d{6}\*{6}\d{4}', transaction)
             if card_number is not None:  # if card number found
                 card_number = card_number.group(0)[-4::]
             else:
@@ -111,11 +111,13 @@ def mtbstatementparse(filename):
                     transaction_category = 'Комиссия по операции'
 
             # amounts extraction
-            transaction_amount = re.search(r'\w{3}\d{1,5}.\d{2}\s', transaction).group(0)[3::]
-            transaction_currency = re.search(r'\w{3}\d{1,5}.\d{2}\s', transaction).group(0)[:3:]
-            billing_amount = re.search(r'\d{1,5}\.\d{2}[+-]', transaction).group(0)
+            transaction_amount = re.search(r'[A-Z]{3}\d{1,5}\.\d{2}\s', transaction).group(0)[3::].replace('.', ',')
+
+            transaction_currency = re.search(r'[A-Z]{3}\d{1,5}\.\d{2}\s', transaction).group(0)[:3:]
+            billing_amount = re.search(r'\d{1,5}\.\d{2}[+-]', transaction).group(0).replace('.', ',')
             if billing_amount[-1::] == '-':
                 billing_amount = '-' + billing_amount[:-1:]
+                transaction_amount = '-' + transaction_amount
             elif billing_amount[-1::] == '+':
                 billing_amount = billing_amount[:-1:]
             csv_output_string = str([transaction_date,
@@ -129,7 +131,6 @@ def mtbstatementparse(filename):
                                      billing_currency,
                                      card_number,
                                      transaction_category])
-
             # Writing to a file
             with open('MResult.csv', 'a') as target_csv:
                 target_csv.write(csv_output_string)

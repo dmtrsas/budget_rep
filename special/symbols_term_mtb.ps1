@@ -1,4 +1,8 @@
 
+ $dquo = get-content -path G:\Budget\DB\mtb_to_db\MResult.csv
+ $notdquo = $dquo -replace '"',''
+ $notdquo | set-content -path G:\Budget\DB\mtb_to_db\MResult.csv
+
  $commadot = get-content -path G:\Budget\DB\mtb_to_db\MResult.csv
  $notcommadot = $commadot -replace "',","';"
  $notcommadot | set-content -path G:\Budget\DB\mtb_to_db\MResult.csv
