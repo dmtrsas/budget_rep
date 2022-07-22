@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="MTBPrior_Integration"
   DTS:PackageType="5"
-  DTS:VersionBuild="82"
-  DTS:VersionGUID="{F17388B6-DCE2-4235-95B7-ABAC1C19633F}">
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{8F27A821-1B8B-47AA-BC0A-E14E26C7A2AB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -37,16 +37,16 @@
               DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="133"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Transaction date "
-              DTS:DTSID="{6C1FB09F-29CE-4FAE-9CA0-B913C937BF1E}"
+              DTS:ObjectName=" Transaction date"
+              DTS:DTSID="{F912D845-17DC-481B-B52A-49EA720C054B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="134"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Transaction time "
-              DTS:DTSID="{7D1C5407-783D-49B9-BF64-F7CA453A1891}"
+              DTS:ObjectName="Transaction time"
+              DTS:DTSID="{81B4506D-158C-4D62-B6CB-FFE9FB4D4A2F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,8 +54,16 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Transaction description "
-              DTS:DTSID="{5D32BE2E-F86D-4323-B64D-546E9776E130}"
+              DTS:ObjectName="Transaction description"
+              DTS:DTSID="{558EDC98-87F5-4C80-B9C8-71B41E94143E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MCC"
+              DTS:DTSID="{690AB11E-44FD-443F-8A84-21AA18684DBC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,8 +71,8 @@
               DTS:DataType="14"
               DTS:DataScale="2"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Transaction Amount "
-              DTS:DTSID="{AA8A1FE9-9ED5-44CD-BFF9-C4D4DC481C58}"
+              DTS:ObjectName="Transaction Amount"
+              DTS:DTSID="{BE7EB6D9-7189-45AB-A568-9D5E9724BEEC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,16 +80,16 @@
               DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Currency "
-              DTS:DTSID="{326794B0-BF24-41F6-B90E-AB0248471DEE}"
+              DTS:ObjectName="Currency"
+              DTS:DTSID="{48AE70A7-BB9F-4E45-A4C2-E20AE073BBBE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="133"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Account Date "
-              DTS:DTSID="{49A3B737-BF55-4802-83FB-31A532C50300}"
+              DTS:ObjectName="Account Date"
+              DTS:DTSID="{3A9357F4-CB35-4DBA-B314-36F230A97071}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -89,8 +97,8 @@
               DTS:MaximumWidth="30"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Account Number "
-              DTS:DTSID="{0242FD48-355B-4AC3-9323-D692976C81CB}"
+              DTS:ObjectName="Account Number"
+              DTS:DTSID="{AB3C8EB0-E883-4AE2-887F-D8C3220F14EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -98,8 +106,8 @@
               DTS:DataType="14"
               DTS:DataScale="2"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Billing amount "
-              DTS:DTSID="{96BFE9EE-AC69-45F1-903F-29CC24F6A04F}"
+              DTS:ObjectName="Billing amount"
+              DTS:DTSID="{CD197592-BFDA-41EA-9534-1B2F259AA25C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -107,8 +115,8 @@
               DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Billing currency "
-              DTS:DTSID="{2130821D-49C2-4BD0-9AC6-5508C58BAC8A}"
+              DTS:ObjectName="Billing currency"
+              DTS:DTSID="{10543BD6-4047-48DE-A826-509E5CB950DB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -116,8 +124,8 @@
               DTS:MaximumWidth="10"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Card Number "
-              DTS:DTSID="{7C61542F-B9E4-4621-B793-CDBFC14FB016}"
+              DTS:ObjectName="Card Number"
+              DTS:DTSID="{4BE74DD0-1427-44BE-AE53-E4DBF690B58E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -125,8 +133,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName=" Category  "
-              DTS:DTSID="{A51C356F-61EE-4031-827F-1C506137A70D}"
+              DTS:ObjectName="Category  "
+              DTS:DTSID="{256B586A-89D8-4C37-92A6-10C0904B3DA3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -453,6 +461,214 @@
           version="1">
           <components>
             <component
+              refId="Package\Dataflow MTB\Accounts-Cards mapping"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Уточняющий запрос;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;6"
+              description="Присоединяет дополнительные столбцы к потоку данных путем поиска значений в таблице. Пример: соединение со столбцом &quot;employee id&quot; таблицы employees позволяет получить значения &quot;hire date&quot; и &quot;employee name&quot;. Рекомендуется воспользоваться этим преобразованием, если таблица подстановки не помещается в памяти."
+              name="Accounts-Cards mapping"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Задает инструкцию SQL, которая формирует таблицу уточняющих запросов."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+ C.CARD_NUMBER as "CARD_NUMBER"
+, C.ACCNO AS "ACCOUNT_NUMBER"
+, A.ID AS "ACCOUNT_ID" 
+, C.ID AS "CARD_ID"
+FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO</property>
+                <property
+                  dataType="System.String"
+                  description="Задает инструкцию SQL, которая использует параметры для формирования таблицы уточняющих запросов."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT 
+ C.CARD_NUMBER as "CARD_NUMBER"
+, C.ACCNO AS "ACCOUNT_NUMBER"
+, A.ID AS "ACCOUNT_ID" 
+, C.ID AS "CARD_ID"
+FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO) [refTable]
+where [refTable].[ACCOUNT_NUMBER] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает тип соединения, используемого для доступа к эталонному набору данных."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает тип кэша таблицы уточняющих запросов."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает долю кэша (в процентах), выделенную для строк без совпадающих элементов в эталонном наборе данных."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Максимальный объем памяти для кэша ссылок на 32-разрядной платформе."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Максимальный объем памяти для кэша ссылок на 64-разрядной платформе."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает, следует ли ссылаться на метаданные в формате XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CARD_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CARD_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Задает список идентификаторов журнала обращений и преобразований, сопоставляемый с параметрами, которые использует инструкция SQL в свойстве SQLCommand. Элементы списка разделяются точками с запятой."
+                  name="ParameterMap">#{Package\Dataflow MTB\185:invalid};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Определяет, должны ли повторяющиеся ключи в ссылочных данных обрабатываться как ошибки при использовании режима полного кэширования."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Dataflow MTB\Accounts-Cards mapping.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
+                  description="Диспетчер соединений, используемый для доступа к данным уточняющих запросов."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Dataflow MTB\Accounts-Cards mapping.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
+                  name="Ввод преобразования &quot;Уточняющий запрос&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Dataflow MTB\Accounts-Cards mapping.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;].Columns[CARD_NUMBER]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Card Number"
+                      errorOrTruncationOperation="Копировать столбец"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Card Number]"
+                      name="CARD_NUMBER"
+                      truncationRowDisposition="RedirectRow"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="Указывает в ссылочной таблице столбец, который соединен с данным столбцом."
+                          name="JoinToReferenceColumn" />
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn">CARD_NUMBER</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Dataflow MTB\Accounts-Cards mapping.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;].Columns[ACCOUNT_NO]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="Account Number"
+                      errorOrTruncationOperation="Копировать столбец"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Number]"
+                      name="ACCOUNT_NO"
+                      truncationRowDisposition="RedirectRow"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, который соединен с данным столбцом."
+                          name="JoinToReferenceColumn">ACCOUNT_NUMBER</property>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn">ACCOUNT_NUMBER</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]"
+                  errorOrTruncationOperation="Уточняющий запрос"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Вывод совпадений преобразования &quot;Уточняющий запрос&quot;"
+                  synchronousInputId="Package\Dataflow MTB\Accounts-Cards mapping.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[ACCOUNT_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Копировать столбец"
+                      lineageId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[ACCOUNT_ID]"
+                      name="ACCOUNT_ID"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn">ACCOUNT_ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[CARD_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Копировать столбец"
+                      lineageId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[CARD_ID]"
+                      name="CARD_ID"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn">CARD_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Выход несовпадающих строк уточняющего запроса]"
+                  description="Вывод преобразования &quot;Уточняющий запрос&quot;, которое обрабатывает строки без совпадающих элементов в эталонном наборе данных. Используйте этот выход, если свойство NoMatchBehavior имеет значение &quot;Отправить строки без совпадающих элементов в выход несовпадающих строк&quot;."
+                  exclusionGroup="1"
+                  name="Выход несовпадающих строк уточняющего запроса"
+                  synchronousInputId="Package\Dataflow MTB\Accounts-Cards mapping.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
+                  synchronousInputId="Package\Dataflow MTB\Accounts-Cards mapping.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Dataflow MTB\Budget DB"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
@@ -493,6 +709,7 @@
       ,[TRANSFER_TO]
       ,[ACCOUNT_ID]
       ,[CARD_ID]
+      ,[MCC]
   FROM [dbo].[TRANSACTIONS]</property>
                 <property
                   dataType="System.Int32"
@@ -545,87 +762,93 @@
                       cachedDataType="i2"
                       cachedName="ACCOUNT_ID"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ACCOUNT_ID]"
-                      lineageId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[ACCOUNT_ID]" />
+                      lineageId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[ACCOUNT_ID]" />
                     <inputColumn
                       refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[CARD_ID]"
                       cachedDataType="i2"
                       cachedName="CARD_ID"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CARD_ID]"
-                      lineageId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[CARD_ID]" />
+                      lineageId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[CARD_ID]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Transaction date ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Transaction date]"
                       cachedDataType="dbDate"
-                      cachedName=" Transaction date "
+                      cachedName=" Transaction date"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_DATE]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction date ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction date]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Transaction time ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Transaction time]"
                       cachedDataType="dbTime"
-                      cachedName=" Transaction time "
+                      cachedName="Transaction time"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_TIME]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction time ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction time]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Transaction description ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Transaction description]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName=" Transaction description "
+                      cachedName="Transaction description"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_DESCR]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction description ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction description]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Transaction Amount ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Transaction Amount]"
                       cachedDataType="decimal"
-                      cachedName=" Transaction Amount "
+                      cachedName="Transaction Amount"
                       cachedScale="2"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_AMOUNT]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction Amount ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction Amount]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Currency ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName=" Currency "
+                      cachedName="Currency"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_CURRENCY]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Currency ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Currency]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Account Date ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Account Date]"
                       cachedDataType="dbDate"
-                      cachedName=" Account Date "
+                      cachedName="Account Date"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[BILL_DATE]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Date ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Date]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Account Number ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Account Number]"
                       cachedDataType="wstr"
                       cachedLength="30"
-                      cachedName=" Account Number "
+                      cachedName="Account Number"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ACCOUNT_NO]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Number ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Number]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Billing amount ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Billing amount]"
                       cachedDataType="decimal"
-                      cachedName=" Billing amount "
+                      cachedName="Billing amount"
                       cachedScale="2"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[BILL_AMOUNT]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Billing amount ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Billing amount]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Billing currency ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Billing currency]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName=" Billing currency "
+                      cachedName="Billing currency"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[BILL_CURRENCY]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Billing currency ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Billing currency]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Card Number ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Card Number]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName=" Card Number "
+                      cachedName="Card Number"
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[PAN]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Card Number ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Card Number]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ Category  ]"
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Category  ]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName=" Category  "
+                      cachedName="Category  "
                       externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_CATEGORY]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Category  ]" />
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Category  ]" />
+                    <inputColumn
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[MCC]"
+                      cachedDataType="ui2"
+                      cachedName="MCC"
+                      externalMetadataColumnId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MCC]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[MCC]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -705,6 +928,10 @@
                       refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CARD_ID]"
                       dataType="i2"
                       name="CARD_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MCC]"
+                      dataType="i2"
+                      name="MCC" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -734,12 +961,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\Dataflow MTB\Lookup Errors"
+              refId="Package\Dataflow MTB\Lookup Errors_cards-accs"
               componentClassID="Microsoft.FlatFileDestination"
               contactInfo="Назначение &quot;Неструктурированный файл&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
               description="Назначение &quot;Неструктурированный файл&quot;"
               localeId="8192"
-              name="Lookup Errors"
+              name="Lookup Errors_cards-accs"
               version="1">
               <properties>
                 <property
@@ -758,164 +985,164 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Dataflow MTB\Lookup Errors.Connections[FlatFileConnection]"
+                  refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Lookup Errors file]"
                   connectionManagerRefId="Package.ConnectionManagers[Lookup Errors file]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
+                  refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
                   hasSideEffects="true"
                   name="Вход назначения &quot;Неструктурированный файл&quot;">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Transaction date ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Transaction date]"
                       cachedDataType="dbDate"
-                      cachedName=" Transaction date "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction date ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction date ]" />
+                      cachedName=" Transaction date"
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction date ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction date]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Transaction time ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Transaction time]"
                       cachedDataType="dbTime"
-                      cachedName=" Transaction time "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction time ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction time ]" />
+                      cachedName="Transaction time"
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction time ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction time]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Transaction description ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Transaction description]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName=" Transaction description "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction description ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction description ]" />
+                      cachedName="Transaction description"
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction description ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction description]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Transaction Amount ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Transaction Amount]"
                       cachedDataType="decimal"
-                      cachedName=" Transaction Amount "
+                      cachedName="Transaction Amount"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction Amount ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction Amount ]" />
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction Amount ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction Amount]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Currency ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName=" Currency "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Currency ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Currency ]" />
+                      cachedName="Currency"
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Currency ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Currency]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Account Date ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Account Date]"
                       cachedDataType="dbDate"
-                      cachedName=" Account Date "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Account Date ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Date ]" />
+                      cachedName="Account Date"
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Account Date ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Date]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Account Number ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Account Number]"
                       cachedDataType="wstr"
                       cachedLength="30"
-                      cachedName=" Account Number "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ACCOUNT_NO]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Number ]" />
+                      cachedName="Account Number"
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ACCOUNT_NO]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Number]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Billing amount ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Billing amount]"
                       cachedDataType="decimal"
-                      cachedName=" Billing amount "
+                      cachedName="Billing amount"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing amount ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Billing amount ]" />
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing amount ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Billing amount]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Billing currency ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Billing currency]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName=" Billing currency "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing currency ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Billing currency ]" />
+                      cachedName="Billing currency"
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing currency ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Billing currency]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Card Number ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Card Number]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName=" Card Number "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[CARD_NUMBER]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Card Number ]" />
+                      cachedName="Card Number"
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[CARD_NUMBER]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Card Number]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ Category  ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Category  ]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName=" Category  "
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Category  ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Category  ]" />
+                      cachedName="Category  "
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Category  ]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Category  ]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ErrorCode]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]" />
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]" />
                     <inputColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]" />
+                      externalMetadataColumnId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction date ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction date ]"
                       dataType="dbDate"
                       name=" Transaction date " />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction time ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction time ]"
                       dataType="dbTime"
                       name=" Transaction time " />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction description ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction description ]"
                       dataType="wstr"
                       length="255"
                       name=" Transaction description " />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction Amount ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction Amount ]"
                       dataType="decimal"
                       name=" Transaction Amount "
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Currency ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Currency ]"
                       dataType="wstr"
                       length="20"
                       name=" Currency " />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Account Date ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Account Date ]"
                       dataType="dbDate"
                       name=" Account Date " />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ACCOUNT_NO]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ACCOUNT_NO]"
                       dataType="wstr"
                       length="30"
                       name="ACCOUNT_NO" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing amount ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing amount ]"
                       dataType="decimal"
                       name=" Billing amount "
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing currency ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing currency ]"
                       dataType="wstr"
                       length="20"
                       name=" Billing currency " />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[CARD_NUMBER]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[CARD_NUMBER]"
                       dataType="wstr"
                       length="10"
                       name="CARD_NUMBER" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Category  ]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ Category  ]"
                       dataType="wstr"
                       length="255"
                       name=" Category  " />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorCode]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorCode]"
                       dataType="i4"
                       name="ErrorCode" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorColumn]"
+                      refId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorColumn]"
                       dataType="i4"
                       name="ErrorColumn" />
                   </externalMetadataColumns>
@@ -954,13 +1181,13 @@
                   name="Выход источника &quot;Неструктурированный файл&quot;">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction date ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction date]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction date ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction date ]"
-                      name=" Transaction date "
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction date]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction date]"
+                      name=" Transaction date"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -974,13 +1201,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction time ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction time]"
                       dataType="dbTime"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction time ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction time ]"
-                      name=" Transaction time "
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Transaction time]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction time]"
+                      name="Transaction time"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -994,14 +1221,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction description ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction description]"
                       dataType="wstr"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction description ]"
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Transaction description]"
                       length="255"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction description ]"
-                      name=" Transaction description "
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction description]"
+                      name="Transaction description"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -1015,13 +1242,33 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction Amount ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[MCC]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[MCC]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[MCC]"
+                      name="MCC"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction Amount]"
                       dataType="decimal"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction Amount ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Transaction Amount ]"
-                      name=" Transaction Amount "
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Transaction Amount]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Transaction Amount]"
+                      name="Transaction Amount"
                       scale="2"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -1036,14 +1283,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Currency ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Currency]"
                       dataType="wstr"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Currency ]"
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Currency]"
                       length="20"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Currency ]"
-                      name=" Currency "
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Currency]"
+                      name="Currency"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -1057,13 +1304,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Date ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Date]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Account Date ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Date ]"
-                      name=" Account Date "
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Account Date]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Date]"
+                      name="Account Date"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -1077,14 +1324,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Number ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Number]"
                       dataType="wstr"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Account Number ]"
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Account Number]"
                       length="30"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Number ]"
-                      name=" Account Number "
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Account Number]"
+                      name="Account Number"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -1098,13 +1345,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Billing amount ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Billing amount]"
                       dataType="decimal"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing amount ]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Billing amount ]"
-                      name=" Billing amount "
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Billing amount]"
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Billing amount]"
+                      name="Billing amount"
                       scale="2"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -1119,14 +1366,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Billing currency ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Billing currency]"
                       dataType="wstr"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing currency ]"
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Billing currency]"
                       length="20"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Billing currency ]"
-                      name=" Billing currency "
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Billing currency]"
+                      name="Billing currency"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -1140,14 +1387,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Card Number ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Card Number]"
                       dataType="wstr"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Card Number ]"
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Card Number]"
                       length="10"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Card Number ]"
-                      name=" Card Number "
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Card Number]"
+                      name="Card Number"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -1161,14 +1408,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Category  ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Category  ]"
                       dataType="wstr"
                       errorOrTruncationOperation="Преобразование"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Category  ]"
+                      externalMetadataColumnId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Category  ]"
                       length="255"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Category  ]"
-                      name=" Category  "
+                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Category  ]"
+                      name="Category  "
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
@@ -1185,57 +1432,61 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction date ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction date]"
                       dataType="dbDate"
-                      name=" Transaction date " />
+                      name=" Transaction date" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction time ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Transaction time]"
                       dataType="dbTime"
-                      name=" Transaction time " />
+                      name="Transaction time" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction description ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Transaction description]"
                       dataType="wstr"
                       length="255"
-                      name=" Transaction description " />
+                      name="Transaction description" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Transaction Amount ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[MCC]"
+                      dataType="ui2"
+                      name="MCC" />
+                    <externalMetadataColumn
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Transaction Amount]"
                       dataType="decimal"
-                      name=" Transaction Amount "
+                      name="Transaction Amount"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Currency ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Currency]"
                       dataType="wstr"
                       length="20"
-                      name=" Currency " />
+                      name="Currency" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Account Date ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Account Date]"
                       dataType="dbDate"
-                      name=" Account Date " />
+                      name="Account Date" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Account Number ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Account Number]"
                       dataType="wstr"
                       length="30"
-                      name=" Account Number " />
+                      name="Account Number" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing amount ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Billing amount]"
                       dataType="decimal"
-                      name=" Billing amount "
+                      name="Billing amount"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Billing currency ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Billing currency]"
                       dataType="wstr"
                       length="20"
-                      name=" Billing currency " />
+                      name="Billing currency" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Card Number ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Card Number]"
                       dataType="wstr"
                       length="10"
-                      name=" Card Number " />
+                      name="Card Number" />
                     <externalMetadataColumn
-                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[ Category  ]"
+                      refId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Category  ]"
                       dataType="wstr"
                       length="255"
-                      name=" Category  " />
+                      name="Category  " />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1342,226 +1593,18 @@
                 </input>
               </inputs>
             </component>
-            <component
-              refId="Package\Dataflow MTB\Уточняющий запрос"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Уточняющий запрос;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;6"
-              description="Присоединяет дополнительные столбцы к потоку данных путем поиска значений в таблице. Пример: соединение со столбцом &quot;employee id&quot; таблицы employees позволяет получить значения &quot;hire date&quot; и &quot;employee name&quot;. Рекомендуется воспользоваться этим преобразованием, если таблица подстановки не помещается в памяти."
-              name="Уточняющий запрос"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Задает инструкцию SQL, которая формирует таблицу уточняющих запросов."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
- C.CARD_NUMBER as "CARD_NUMBER"
-, C.ACCNO AS "ACCOUNT_NUMBER"
-, A.ID AS "ACCOUNT_ID" 
-, C.ID AS "CARD_ID"
-FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO</property>
-                <property
-                  dataType="System.String"
-                  description="Задает инструкцию SQL, которая использует параметры для формирования таблицы уточняющих запросов."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT 
- C.CARD_NUMBER as "CARD_NUMBER"
-, C.ACCNO AS "ACCOUNT_NUMBER"
-, A.ID AS "ACCOUNT_ID" 
-, C.ID AS "CARD_ID"
-FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO) [refTable]
-where [refTable].[ACCOUNT_NUMBER] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Указывает тип соединения, используемого для доступа к эталонному набору данных."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Указывает тип кэша таблицы уточняющих запросов."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Указывает долю кэша (в процентах), выделенную для строк без совпадающих элементов в эталонном наборе данных."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Максимальный объем памяти для кэша ссылок на 32-разрядной платформе."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Максимальный объем памяти для кэша ссылок на 64-разрядной платформе."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Указывает, следует ли ссылаться на метаданные в формате XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CARD_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CARD_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Задает список идентификаторов журнала обращений и преобразований, сопоставляемый с параметрами, которые использует инструкция SQL в свойстве SQLCommand. Элементы списка разделяются точками с запятой."
-                  name="ParameterMap">#{Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника "Неструктурированный файл"].Columns[ Account Number ]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
-                  name="DefaultCodePage">1251</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Определяет, должны ли повторяющиеся ключи в ссылочных данных обрабатываться как ошибки при использовании режима полного кэширования."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Dataflow MTB\Уточняющий запрос.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BDNF0K4\SQLEXPRESS.Budget]"
-                  description="Диспетчер соединений, используемый для доступа к данным уточняющих запросов."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Dataflow MTB\Уточняющий запрос.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
-                  name="Ввод преобразования &quot;Уточняющий запрос&quot;">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Dataflow MTB\Уточняющий запрос.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;].Columns[CARD_NUMBER]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName=" Card Number "
-                      errorOrTruncationOperation="Копировать столбец"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Card Number ]"
-                      name="CARD_NUMBER"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          dataType="System.Null"
-                          description="Указывает в ссылочной таблице столбец, который соединен с данным столбцом."
-                          name="JoinToReferenceColumn" />
-                        <property
-                          dataType="System.String"
-                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
-                          name="CopyFromReferenceColumn">CARD_NUMBER</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Dataflow MTB\Уточняющий запрос.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;].Columns[ACCOUNT_NO]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName=" Account Number "
-                      errorOrTruncationOperation="Копировать столбец"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Account Number ]"
-                      name="ACCOUNT_NO"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Указывает в ссылочной таблице столбец, который соединен с данным столбцом."
-                          name="JoinToReferenceColumn">ACCOUNT_NUMBER</property>
-                        <property
-                          dataType="System.String"
-                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
-                          name="CopyFromReferenceColumn">ACCOUNT_NUMBER</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]"
-                  errorOrTruncationOperation="Уточняющий запрос"
-                  errorRowDisposition="RedirectRow"
-                  exclusionGroup="1"
-                  name="Вывод совпадений преобразования &quot;Уточняющий запрос&quot;"
-                  synchronousInputId="Package\Dataflow MTB\Уточняющий запрос.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[ACCOUNT_ID]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Копировать столбец"
-                      lineageId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[ACCOUNT_ID]"
-                      name="ACCOUNT_ID"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
-                          name="CopyFromReferenceColumn">ACCOUNT_ID</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[CARD_ID]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Копировать столбец"
-                      lineageId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[CARD_ID]"
-                      name="CARD_ID"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
-                          name="CopyFromReferenceColumn">CARD_ID</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Выход несовпадающих строк уточняющего запроса]"
-                  description="Вывод преобразования &quot;Уточняющий запрос&quot;, которое обрабатывает строки без совпадающих элементов в эталонном наборе данных. Используйте этот выход, если свойство NoMatchBehavior имеет значение &quot;Отправить строки без совпадающих элементов в выход несовпадающих строк&quot;."
-                  exclusionGroup="1"
-                  name="Выход несовпадающих строк уточняющего запроса"
-                  synchronousInputId="Package\Dataflow MTB\Уточняющий запрос.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
-                  synchronousInputId="Package\Dataflow MTB\Уточняющий запрос.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\Dataflow MTB.Paths[Lookup errors]"
-              endId="Package\Dataflow MTB\Lookup Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
-              name="Lookup errors"
-              startId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
+              refId="Package\Dataflow MTB.Paths[Cards-Accs lookup errors]"
+              endId="Package\Dataflow MTB\Lookup Errors_cards-accs.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
+              name="Cards-Accs lookup errors"
+              startId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
             <path
-              refId="Package\Dataflow MTB.Paths[Sink load]"
+              refId="Package\Dataflow MTB.Paths[IDs added]"
               endId="Package\Dataflow MTB\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;]"
-              name="Sink load"
-              startId="Package\Dataflow MTB\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]" />
+              name="IDs added"
+              startId="Package\Dataflow MTB\Accounts-Cards mapping.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]" />
             <path
               refId="Package\Dataflow MTB.Paths[Source errors]"
               endId="Package\Dataflow MTB\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
@@ -1569,7 +1612,7 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
               startId="Package\Dataflow MTB\MTB Source CSV.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;]" />
             <path
               refId="Package\Dataflow MTB.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
-              endId="Package\Dataflow MTB\Уточняющий запрос.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
+              endId="Package\Dataflow MTB\Accounts-Cards mapping.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
               name="Выход источника &quot;Неструктурированный файл&quot;"
               startId="Package\Dataflow MTB\MTB Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;]" />
           </paths>
@@ -1630,6 +1673,7 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
       ,[TRANSFER_TO]
       ,[ACCOUNT_ID]
       ,[CARD_ID]
+      ,[MCC]
   FROM [dbo].[TRANSACTIONS]</property>
                 <property
                   dataType="System.Int32"
@@ -1763,6 +1807,12 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                       cachedName=" Category  "
                       externalMetadataColumnId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TXN_CATEGORY]"
                       lineageId="Package\Dataflow Prior\Prior Source CSV.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[ Category  ]" />
+                    <inputColumn
+                      refId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[MCC]"
+                      cachedDataType="i4"
+                      cachedName="MCC"
+                      externalMetadataColumnId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MCC]"
+                      lineageId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[MCC]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1842,6 +1892,10 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                       refId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CARD_ID]"
                       dataType="i2"
                       name="CARD_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MCC]"
+                      dataType="i2"
+                      name="MCC" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2494,10 +2548,17 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+ 
  C.CARD_NUMBER as "CARD_NUMBER"
+
 , C.ACCNO AS "ACCOUNT_NUMBER"
-, A.ID AS "ACCOUNT_ID" 
+
+, A.ID AS "ACCOUNT_ID"
+
 , C.ID AS "CARD_ID"
+, 9999 AS "MCC"
+
+
 FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO</property>
                 <property
                   dataType="System.String"
@@ -2505,10 +2566,17 @@ FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT 
+ 
  C.CARD_NUMBER as "CARD_NUMBER"
+
 , C.ACCNO AS "ACCOUNT_NUMBER"
-, A.ID AS "ACCOUNT_ID" 
+
+, A.ID AS "ACCOUNT_ID"
+
 , C.ID AS "CARD_ID"
+, 9999 AS "MCC"
+
+
 FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO) [refTable]
 where [refTable].[CARD_NUMBER] = ?</property>
                 <property
@@ -2541,7 +2609,7 @@ where [refTable].[CARD_NUMBER] = ?</property>
                 <property
                   dataType="System.String"
                   description="Указывает, следует ли ссылаться на метаданные в формате XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CARD_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CARD_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CARD_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CARD_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MCC" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2650,6 +2718,20 @@ where [refTable].[CARD_NUMBER] = ?</property>
                           dataType="System.String"
                           description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
                           name="CopyFromReferenceColumn">CARD_ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[MCC]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Копировать столбец"
+                      lineageId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[MCC]"
+                      name="MCC"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn">MCC</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2775,39 +2857,63 @@ where [refTable].[CARD_NUMBER] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\Dataflow MTB\Lookup Errors"
-          TopLeft="710,249" />
-        <NodeLayout
           Size="142.4,41.6"
           Id="Package\Dataflow MTB\Source Errors"
           TopLeft="710,78" />
         <NodeLayout
-          Size="160,41.6"
-          Id="Package\Dataflow MTB\MTB Source CSV"
-          TopLeft="302.857150889578,72.8952380785109" />
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\Dataflow MTB\Уточняющий запрос"
-          TopLeft="287.499995728334,253.333335330751" />
-        <NodeLayout
           Size="128.8,41.6"
           Id="Package\Dataflow MTB\Budget DB"
-          TopLeft="306.499990363916,479.333336983787" />
+          TopLeft="311.037027220668,399.888891907975" />
+        <NodeLayout
+          Size="200,41.6"
+          Id="Package\Dataflow MTB\Lookup Errors_cards-accs"
+          TopLeft="710,249" />
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Dataflow MTB\MTB Source CSV"
+          TopLeft="291.746040219983,72.8952380785109" />
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\Dataflow MTB\Accounts-Cards mapping"
+          TopLeft="272.685181502207,254.296298301367" />
         <EdgeLayout
-          Id="Package\Dataflow MTB.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
-          TopLeft="379.378573308956,114.495238078511">
+          Id="Package\Dataflow MTB.Paths[Cards-Accs lookup errors]"
+          TopLeft="467.885181502207,272.448149150683">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,138.83809725224"
+              EndConnector="242.114818497793,0"
               Start="0,0"
-              End="0,131.33809725224">
+              End="234.614818497793,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,131.33809725224" />
+                    End="234.614818497793,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="61.7556449259797,5,111.103528645833,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dataflow MTB.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
+          TopLeft="371.015610861095,114.495238078511">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,139.801060222856"
+              Start="0,0"
+              End="0,132.301060222856">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,132.301060222856" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2818,81 +2924,69 @@ where [refTable].[CARD_NUMBER] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dataflow MTB.Paths[Source errors]"
-          TopLeft="462.857150889578,96.2476190392555">
+          TopLeft="451.746040219983,96.2476190392555">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="247.142849110422,0"
+              EndConnector="258.253959780017,0"
               Start="0,0"
-              End="239.642849110422,0">
+              End="250.753959780017,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="239.642849110422,0" />
+                    End="250.753959780017,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="89.538182367711,5,60.566484375,9.5537109375"
+              BoundingBox="95.0937377025085,5,60.566484375,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dataflow MTB.Paths[Sink load]"
-          TopLeft="373.399993046125,294.933335330751">
+          Id="Package\Dataflow MTB.Paths[IDs added]"
+          TopLeft="372.861104361437,295.896298301367">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,184.400001653036"
+              EndConnector="0,103.992593606608"
               Start="0,0"
-              End="0,176.900001653036">
+              End="0,96.4925936066078">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,176.900001653036" />
+                    End="0,96.4925936066078" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-134.68986328125,82.450000826518,269.3797265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Dataflow MTB.Paths[Lookup errors]"
-          TopLeft="464.299995728334,271.966667665376">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="245.700004271666,0"
-              Start="0,0"
-              End="238.200004271666,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="238.200004271666,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="88.057424010833,5,62.08515625,11.609375"
+              BoundingBox="-23.03958984375,43.3717850845539,46.0791796875,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelinePath
+    design-time-name="Package\Dataflow MTB.Paths[IDs added]">
+    <PathAnnotation>PathName</PathAnnotation>
+  </PipelinePath>
   <PipelineComponentMetadata
-    design-time-name="Package\Dataflow MTB\Уточняющий запрос">
+    design-time-name="Package\Dataflow MTB\Budget DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dataflow MTB\Accounts-Cards mapping">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2924,10 +3018,6 @@ where [refTable].[CARD_NUMBER] = ?</property>
           Id="Package\Dataflow Prior\Lookup Errors"
           TopLeft="710,249" />
         <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\Dataflow Prior\Source Errors"
-          TopLeft="710,78" />
-        <NodeLayout
           Size="160,41.6"
           Id="Package\Dataflow Prior\Prior Source CSV"
           TopLeft="302.857150889578,72.8952380785109" />
@@ -2936,31 +3026,13 @@ where [refTable].[CARD_NUMBER] = ?</property>
           Id="Package\Dataflow Prior\Уточняющий запрос"
           TopLeft="287.499995728334,253.333335330751" />
         <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Dataflow Prior\Source Errors"
+          TopLeft="710,78" />
+        <NodeLayout
           Size="128.8,41.6"
           Id="Package\Dataflow Prior\Budget DB"
           TopLeft="306.499990363916,479.333336983787" />
-        <EdgeLayout
-          Id="Package\Dataflow Prior.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
-          TopLeft="379.378573308956,114.495238078511">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,138.83809725224"
-              Start="0,0"
-              End="0,131.33809725224">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,131.33809725224" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Dataflow Prior.Paths[Source errors]"
           TopLeft="462.857150889578,96.2476190392554">
@@ -3033,9 +3105,44 @@ where [refTable].[CARD_NUMBER] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dataflow Prior.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
+          TopLeft="379.378573308956,114.495238078511">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,138.83809725224"
+              Start="0,0"
+              End="0,131.33809725224">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,131.33809725224" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dataflow Prior\Budget DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Dataflow Prior\Уточняющий запрос">
     <Properties>
@@ -3056,19 +3163,6 @@ where [refTable].[CARD_NUMBER] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dataflow Prior\Budget DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
