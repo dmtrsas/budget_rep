@@ -7,7 +7,7 @@ def getstatementslist():
     files = os.listdir(os.getcwd())
     statements_list = []
     for i in files:
-        statement = re.match(r'transactions.{1,2}\d.\.pdf', i)
+        statement = re.match(r'transactions.{0,2}\d?.?\.pdf', i)
         if statement is None:
             pass
         else:
@@ -76,6 +76,11 @@ def mtbstatementparse(filename):
                 card_number = card_number.group(0)[-4::]
             else:
                 card_number = ' '
+            mcc = re.search(r'\d{10}\*{6}\d{4}', transaction)  # MCC goes right before card number
+            if mcc is not None:
+                mcc = mcc.group(0)[:4:]
+            else:
+                mcc = '9999'
             transaction_descr_category = transaction
             # description and category extraction
             if re.search(r'Комиссия\s', transaction_descr_category) is None \
@@ -96,6 +101,13 @@ def mtbstatementparse(filename):
                 # removing description, only category left
                 transaction_descr_category = transaction_descr_category.replace(transaction_descr, '')
                 transaction_category = transaction_descr_category
+                # eliminate TIDs and dates in description
+                if re.search(r',\sномер', transaction_category) is None:
+                    pass
+                else:
+                    transaction_category = re.split(r',\sномер', transaction_category)[0]
+                # eliminate mtb purchases uniqueness - should be usual purchase
+                transaction_category = transaction_category.replace(' в сети МТБанка', '')
 
             # if entry is a commission or ERIP credit or refund - fill in with constant data
             else:
@@ -123,6 +135,7 @@ def mtbstatementparse(filename):
             csv_output_string = str([transaction_date,
                                      transaction_time,
                                      transaction_descr,
+                                     mcc,
                                      transaction_amount,
                                      transaction_currency,
                                      account_date,
@@ -141,7 +154,7 @@ def mtbstatementparse(filename):
 
 with open('MResult.csv', 'a') as target_csv:  # writing header to a result file
     target_csv.writelines("%s\n" % str(
-        ['Transaction date', 'Transaction time', 'Transaction description',
+        ['Transaction date', 'Transaction time', 'Transaction description', 'MCC',
          'Transaction Amount', 'Currency', 'Account Date', 'Account Number',
          'Billing amount', 'Billing currency', 'Card Number', 'Category']))
 for filename in getstatementslist():
