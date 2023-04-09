@@ -1,8 +1,3 @@
-use Budget
-go
-
-
-insert into MCC_CODES values
 (742,N'Ветеринарные услуги'),
 (763,N'Сельскохозяйственные кооперативы'),
 (780,N'Услуги садоводства и ландшафтного дизайна'),
@@ -696,9 +691,7 @@ insert into MCC_CODES values
 (3796,N'Отели, мотели, курорты'),
 (3797,N'Отели, мотели, курорты'),
 (3798,N'Отели, мотели, курорты'),
-(3799,N'Отели, мотели, курорты')
-
-insert into MCC_CODES values
+(3799,N'Отели, мотели, курорты'),
 (3800,N'Homestead Suites'),
 (3801,N'Wilderness Hotel and Resort'),
 (3802,N'The Palace Hotel'),
