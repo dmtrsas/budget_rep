@@ -17,10 +17,9 @@ def getpriorstatementslist():
     return statements_list
 
 
-def getpriorcardnumber(filename):
-    with open(filename) as source_csv:
+def getpriorcardnumber(file):
+    with open(file) as source_csv:
         source_csv_read = csv.reader(source_csv, delimiter=';')
-        pan = ''
         for entry in source_csv_read:
             if not entry or re.search('Карта:', entry[0]) is None:
                 pass
@@ -29,10 +28,9 @@ def getpriorcardnumber(filename):
                 return pan
 
 
-def getpriorcurbill(filename):
-    with open(filename) as source_csv:
+def getpriorcurbill(file):
+    with open(file) as source_csv:
         source_csv_read = csv.reader(source_csv, delimiter=';')
-        curbill = ''
         for entry in source_csv_read:
             if not entry or re.search('Валюта счета: ', entry[0]) is None:
                 pass
@@ -41,15 +39,12 @@ def getpriorcurbill(filename):
                 return curbill
 
 
-def priorstmtparse(filename, pan, curbill):
-    with open(filename) as source_csv:
-        source_csv_read = csv.reader(source_csv, delimiter=';')
-
+def priorstmtparse(file, pan, curbill):
+    with open(file) as source_csv:
         # inserting rows into file
         i = 0  # entries iterator
-        source_csv_rows = []
-        source_csv_read = csv.reader(source_csv, delimiter=';')
-        for row in source_csv_read:
+        source_csv_rows = list()
+        for row in csv.reader(source_csv, delimiter=';'):
             if not row or len(row) != 10:  # every row with necessary data in a source file contains 10 elements
                 i += 1
             else:
@@ -94,8 +89,8 @@ def getmtbstatementslist():
     return statements_list
 
 
-def mtbstmtparse(filename):
-    source_pdf = open(filename, 'rb')
+def mtbstmtparse(file):
+    source_pdf = open(file, 'rb')
     pdf_read = PyPDF2.PdfReader(source_pdf)
     num_pages = pdf_read.numPages
     page_no = 0
