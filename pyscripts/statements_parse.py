@@ -3,7 +3,6 @@ import os
 import re
 import PyPDF2
 
-
 def getpriorstatementslist():
     files = os.listdir(os.getcwd())
     statements_list = []
@@ -41,39 +40,36 @@ def getpriorcurbill(file):
 
 def priorstmtparse(file, pan, curbill):
     with open(file) as source_csv:
-        # inserting rows into file
-        i = 0  # entries iterator
         source_csv_rows = list()
-        for row in csv.reader(source_csv, delimiter=';'):
-            if not row or len(row) != 10:  # every row with necessary data in a source file contains 10 elements
-                i += 1
+        for index, row in enumerate(csv.reader(source_csv, delimiter=';')):
+            # every necessary row contains 10 elements in a source file
+            # and mustn't start with cyrillic symbols - date first
+            if row and len(row) == 10 and bool(re.search('[а-яА-Я]', row[0])) is False:
+                # 8th column contains unnecessary symbol
+                row[8] = row[8].replace('\xa0', '')
+                # datetime column split into date and time
+                datetime = row[0].split(' ')
+                row.insert(1, datetime[0])
+                row.insert(2, datetime[1])
+                row.remove(row[0])
+                # empty last column replaced with "category" column
+                category = row[-1]
+                row.insert(-2, category)
+                row.remove(row[-1])
+                row.remove(row[-3])
+                # insert card number and billing currency
+                row.insert(-2, pan)
+                row.insert(-3, curbill)
+                # append only needed elements
+                source_csv_rows.append(row[:11:])
             else:
-                if bool(re.search('[а-яА-Я]', row[0])) is False:
-                    # 8th column contains unnecessary symbol
-                    row[8] = row[8].replace('\xa0', '')
-                    # datetime column split into date and time
-                    row[0] = row[0].split(' ')
-                    datetime = row[0]
-                    row.insert(1, datetime[0])
-                    row.insert(2, datetime[1])
-                    row.remove(row[0])
-                    # empty column replaced with "category" column
-                    category = row[-1]
-                    row.insert(-2, category)
-                    row.remove(row[-1])
-                    row.remove(row[-3])
-                    # insert card number and billing currency
-                    row.insert(-2, pan)
-                    row.insert(-3, curbill)
-                    # append only needed elements
-                    source_csv_rows.append(row[:11:])
-        i += 1
+                continue
         # writing rows to a file
-    with open('Prior_Result.csv', 'a') as target_csv:
+    with open('Prior_Result.csv', 'a') as prior_res:
         for row in source_csv_rows:
             for elem in row:
                 elem = ";".join(elem)
-            target_csv.writelines("%s\n" % str(row))
+            prior_res.writelines("%s\n" % str(row))
 
 
 def getmtbstatementslist():

@@ -12,7 +12,7 @@ if exists
 print 'column INSERT_DT exists in the table';
 else
 
-alter table transactions add INSERT_DT date;
+alter table transactions add INSERT_DT datetime;
 
 
 if exists 
@@ -25,4 +25,4 @@ if exists
 print 'column UPDATE_DT exists in the table';
 else
 
-alter table transactions add UPDATE_DT date;
+alter table transactions add UPDATE_DT datetime;
