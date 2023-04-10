@@ -19,6 +19,6 @@ TRANSFER_FROM smallint,
 TRANSFER_TO smallint,
 ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
 ACCOUNT_ID smallint foreign key references ACCOUNTS(ID) NOT NULL,
-CARD_ID smallint foreign key references CARDS(ID) NOT NULL,
+CARD_ID smallint foreign key references CARDS(ID) NOT NULL
 
 );
