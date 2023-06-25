@@ -88,15 +88,15 @@ def getmtbstatementslist():
 def mtbstmtparse(file):
     source_pdf = open(file, 'rb')
     pdf_read = PyPDF2.PdfReader(source_pdf)
-    num_pages = pdf_read.numPages
+    num_pages = len(pdf_read.pages)
     page_no = 0
     # retrieve account number, account currency for further purposes (to match with data in destination DB)
-    account_no = re.search(r'BY\d{2}MTBK3014\d{16}', pdf_read.getPage(0).extractText()).group(0)
-    billing_currency = re.search(r'\w{3}Выписка по сч[е-ё]ту', pdf_read.getPage(0).extractText()).group(0)[:3:]
+    account_no = re.search(r'BY\d{2}MTBK3014\d{16}', pdf_read.pages[0].extract_text()).group(0)
+    billing_currency = re.search(r'\w{3}Выписка по сч[е-ё]ту', pdf_read.pages[0].extract_text()).group(0)[:3:]
     # this is what we do for every page of input PDF file
     while page_no < num_pages:
 
-        input_page = ((pdf_read.getPage(page_no)).extractText()).split('\nTранзации')  # extract text + split into pages
+        input_page = ((pdf_read.pages[page_no]).extract_text()).split('\nTранзации')  # extract text + split into pages
         input_page = re.split('\nT', input_page[0])  # \nT - the only adequate delimiter for splitting pages into rows
         input_page = input_page[1::]  # first row of a page (which includes service info) is not needed
 
@@ -217,7 +217,6 @@ def mtbstmtparse(file):
             with open('MTB_Result.csv', 'a') as target_csv:
                 target_csv.write(csv_output_string)
                 target_csv.write('\n')
-
         page_no += 1
 
 
