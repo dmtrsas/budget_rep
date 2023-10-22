@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="MTBPrior_Integration"
   DTS:PackageType="5"
-  DTS:VersionBuild="87"
-  DTS:VersionGUID="{8F27A821-1B8B-47AA-BC0A-E14E26C7A2AB}">
+  DTS:VersionBuild="142"
+  DTS:VersionGUID="{C986DDDD-4E63-4FBA-B7E4-D4A0F7C778FE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1251"
-          DTS:ConnectionString="G:\Budget\DB\mtb_to_db\MResult.csv">
+          DTS:ConnectionString="G:\Budget\DB\banks_to_db\MTB_Result.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction date"
-              DTS:DTSID="{F912D845-17DC-481B-B52A-49EA720C054B}"
+              DTS:DTSID="{6B025A9B-385D-426C-B246-3CC2915ABD45}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -46,7 +46,7 @@
               DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName="Transaction time"
-              DTS:DTSID="{81B4506D-158C-4D62-B6CB-FFE9FB4D4A2F}"
+              DTS:DTSID="{C0F352A7-30FD-429C-A988-999B1229E058}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,7 +55,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Transaction description"
-              DTS:DTSID="{558EDC98-87F5-4C80-B9C8-71B41E94143E}"
+              DTS:DTSID="{01A0D4D2-6227-4C67-B6AC-7C3324D86A24}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="MCC"
-              DTS:DTSID="{690AB11E-44FD-443F-8A84-21AA18684DBC}"
+              DTS:DTSID="{5523F765-CC4D-40CF-8759-7DBA30BA97E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,7 +72,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Transaction Amount"
-              DTS:DTSID="{BE7EB6D9-7189-45AB-A568-9D5E9724BEEC}"
+              DTS:DTSID="{36CDBBA6-E253-4968-B4ED-3373CD002E19}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Currency"
-              DTS:DTSID="{48AE70A7-BB9F-4E45-A4C2-E20AE073BBBE}"
+              DTS:DTSID="{41C8468B-B769-441F-88E6-C904EB5627BE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -89,7 +89,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="Account Date"
-              DTS:DTSID="{3A9357F4-CB35-4DBA-B314-36F230A97071}"
+              DTS:DTSID="{4CD894AF-B94F-4406-92AE-AC7B18A814B3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -98,7 +98,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Account Number"
-              DTS:DTSID="{AB3C8EB0-E883-4AE2-887F-D8C3220F14EE}"
+              DTS:DTSID="{A783D4DA-14C9-4321-8E68-0AF01E13C5D3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -107,7 +107,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Billing amount"
-              DTS:DTSID="{CD197592-BFDA-41EA-9534-1B2F259AA25C}"
+              DTS:DTSID="{B09982D6-DA4E-441D-92D5-5E4BA9E18299}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -116,7 +116,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Billing currency"
-              DTS:DTSID="{10543BD6-4047-48DE-A826-509E5CB950DB}"
+              DTS:DTSID="{C8056A3D-03C4-4F8D-8B0A-AFBD1226ABD6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -125,7 +125,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Card Number"
-              DTS:DTSID="{4BE74DD0-1427-44BE-AE53-E4DBF690B58E}"
+              DTS:DTSID="{7093D721-2A26-4E3B-A9E6-6F8BEC3EBADB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -134,7 +134,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category  "
-              DTS:DTSID="{256B586A-89D8-4C37-92A6-10C0904B3DA3}"
+              DTS:DTSID="{36B6B4E4-C95F-4E2D-9B20-9B99872FDB73}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -154,7 +154,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1251"
-          DTS:ConnectionString="G:\Budget\DB\prior_to_db\Result.csv">
+          DTS:ConnectionString="G:\Budget\DB\banks_to_db\Prior_Result.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -162,7 +162,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction date "
-              DTS:DTSID="{4DDCA5DA-741F-4BE9-ADFE-F50D3E829CC5}"
+              DTS:DTSID="{F981D38C-8722-4F8E-9995-9D8937CC55EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -170,7 +170,7 @@
               DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction time "
-              DTS:DTSID="{026E6BC5-D511-4400-A14E-03D588692127}"
+              DTS:DTSID="{F7880FC0-B8A2-4612-AA9C-6EAD183F7F2F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -179,7 +179,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction description "
-              DTS:DTSID="{19534EB7-3808-4A98-876F-2581E7418685}"
+              DTS:DTSID="{F8DCF603-9710-42F6-A76C-F8CD4207C1D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -188,7 +188,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction Amount "
-              DTS:DTSID="{A582D688-3FE3-4B35-8699-7D27C6DCCEA8}"
+              DTS:DTSID="{C482A595-38D2-4F4B-BB9F-64358E20F765}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -197,7 +197,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Currency "
-              DTS:DTSID="{7572141C-9CCB-485A-AEFF-2216A0D4EF5E}"
+              DTS:DTSID="{8E07018B-ACFF-4DC5-A964-58586DA3C12C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -205,7 +205,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName=" Account Date "
-              DTS:DTSID="{BC3EA4BE-6898-4118-9902-54CF23CB3CC5}"
+              DTS:DTSID="{C7EB23E0-AF20-4FFD-8E28-9E96DFD3B5C4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -214,7 +214,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Account Number "
-              DTS:DTSID="{59213153-5174-4B1C-9401-70CBD9F68364}"
+              DTS:DTSID="{980F08B0-EC03-4C99-85B0-1655B5AC5C77}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -223,7 +223,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName=" Billing amount "
-              DTS:DTSID="{AB287065-63CF-4BF0-AE09-BE6C54FB6B95}"
+              DTS:DTSID="{025EEB6B-A187-42E3-A9A4-948C5416893B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -232,7 +232,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Billing currency "
-              DTS:DTSID="{846D97D7-021B-48D3-A0E0-49EF75954C7F}"
+              DTS:DTSID="{9740A352-341D-4284-9131-85D17B32C8E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -241,7 +241,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Card Number "
-              DTS:DTSID="{36C765BD-33D3-4203-A4B8-61EC09077636}"
+              DTS:DTSID="{B507928B-7CDC-460D-80C2-8A3026027566}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -250,7 +250,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Category  "
-              DTS:DTSID="{8ABAEEB3-A4C2-45C1-90B3-7ED739379551}"
+              DTS:DTSID="{D9C4190B-A663-4106-A060-73FFD436E5A9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -290,7 +290,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction date "
-              DTS:DTSID="{841FE14F-4AA2-4962-B37C-DF28F3479603}"
+              DTS:DTSID="{26DDFB08-9AA1-4FFE-BF8D-78090F706501}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -298,7 +298,7 @@
               DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction time "
-              DTS:DTSID="{1CDE57C3-51F7-46F1-9DF5-FB57FFB22B52}"
+              DTS:DTSID="{66C61CD1-AA3D-44FC-A75E-A700E1C0EEFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -307,7 +307,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction description "
-              DTS:DTSID="{4688F211-8DE4-48E0-BA31-6FFA3BB5E679}"
+              DTS:DTSID="{ED43BE20-8DF6-4640-93A2-831FAEBE2B97}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -316,7 +316,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName=" Transaction Amount "
-              DTS:DTSID="{254BFEC1-F781-4E80-8194-44C9F1C5F2E1}"
+              DTS:DTSID="{1261E74E-3A2F-434D-B950-1DE6D93088F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -325,7 +325,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Currency "
-              DTS:DTSID="{F0139130-4BA9-4F4A-97B0-E2B99CF744A4}"
+              DTS:DTSID="{79601750-B9C8-41F0-B7F0-13232DC991A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -333,7 +333,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName=" Account Date "
-              DTS:DTSID="{F825A8EB-6305-4D8B-977C-1254596BFFA2}"
+              DTS:DTSID="{9A6A231D-9281-4676-8514-E2C1FAFD11C9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -342,7 +342,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ACCOUNT_NO"
-              DTS:DTSID="{AAB149D8-AB5F-4E0D-8ACE-590A80F4B20C}"
+              DTS:DTSID="{67ABD384-6F73-4BC1-B2E6-25D1194F6B58}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -351,7 +351,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName=" Billing amount "
-              DTS:DTSID="{BA135546-9DF7-4437-BE79-F79F98FC476F}"
+              DTS:DTSID="{4D5ABBCB-01A1-477D-B7D2-440A23E53026}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -360,7 +360,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Billing currency "
-              DTS:DTSID="{EFA1275A-5514-4544-BAF1-71242455D73B}"
+              DTS:DTSID="{2A0FAA86-70C2-42B9-9509-1F16A3F2A570}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -369,7 +369,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CARD_NUMBER"
-              DTS:DTSID="{A9010897-5986-47E8-968A-F66EC4BA78CE}"
+              DTS:DTSID="{C307FA24-0DA1-4630-83FF-1C72677AC1D2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -378,7 +378,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName=" Category  "
-              DTS:DTSID="{5B850908-4A52-4E1B-A215-A07A475F31A3}"
+              DTS:DTSID="{43810675-6C0B-46B9-B86A-D310F001EB18}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -386,7 +386,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{12BDA5C8-6F27-48AC-B7F4-3104CE0B814F}"
+              DTS:DTSID="{D75228E0-A0CA-44F5-BB0E-63D8CDFF04A3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -394,7 +394,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{6E8AB28C-196A-46CE-936C-48A7870F87FF}"
+              DTS:DTSID="{4B823BD9-7767-449A-AA3E-CF929C20B209}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -421,8 +421,8 @@
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="302"
               DTS:TextQualified="True"
-              DTS:ObjectName="Error Text"
-              DTS:DTSID="{D11A0C73-13B3-407D-940B-15FF7FD691B4}"
+              DTS:ObjectName="ErrorText"
+              DTS:DTSID="{67CF3EF3-AA9D-4DF3-BF61-A627626F6F8F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -430,7 +430,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{978B518C-951C-48DF-80A9-C4383236433E}"
+              DTS:DTSID="{DE4285A7-0B5C-4001-8671-9F486794C0A3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -438,7 +438,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{DA909185-8E6F-459E-B52A-0441F33FA6E3}"
+              DTS:DTSID="{BB6C0B12-1212-4EE5-A778-6F1865C92696}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -527,7 +527,7 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Задает список идентификаторов журнала обращений и преобразований, сопоставляемый с параметрами, которые использует инструкция SQL в свойстве SQLCommand. Элементы списка разделяются точками с запятой."
-                  name="ParameterMap">#{Package\Dataflow MTB\185:invalid};</property>
+                  name="ParameterMap">#{Package\Dataflow MTB\190:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
@@ -1566,21 +1566,9 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                       cachedName="ErrorColumn"
                       externalMetadataColumnId="Package\Dataflow MTB\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorColumn]"
                       lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]" />
-                    <inputColumn
-                      refId="Package\Dataflow MTB\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;]"
-                      cachedCodepage="1251"
-                      cachedDataType="text"
-                      cachedName="Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;"
-                      externalMetadataColumnId="Package\Dataflow MTB\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[Error Text]"
-                      lineageId="Package\Dataflow MTB\MTB Source CSV.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Dataflow MTB\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[Error Text]"
-                      codePage="1251"
-                      dataType="text"
-                      name="Error Text" />
                     <externalMetadataColumn
                       refId="Package\Dataflow MTB\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorCode]"
                       dataType="i4"
@@ -1589,6 +1577,11 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                       refId="Package\Dataflow MTB\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorColumn]"
                       dataType="i4"
                       name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\Dataflow MTB\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorText]"
+                      codePage="1251"
+                      dataType="text"
+                      name="ErrorText" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1674,6 +1667,8 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
       ,[ACCOUNT_ID]
       ,[CARD_ID]
       ,[MCC]
+      ,[INSERT_DT]
+      ,[UPDATE_DT]
   FROM [dbo].[TRANSACTIONS]</property>
                 <property
                   dataType="System.Int32"
@@ -1813,6 +1808,18 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                       cachedName="MCC"
                       externalMetadataColumnId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MCC]"
                       lineageId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[MCC]" />
+                    <inputColumn
+                      refId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[INSERT_DT]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DT"
+                      externalMetadataColumnId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[INSERT_DT]"
+                      lineageId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[INSERT_DT]" />
+                    <inputColumn
+                      refId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[UPDATE_DT]"
+                      cachedDataType="i4"
+                      cachedName="UPDATE_DT"
+                      externalMetadataColumnId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[UPDATE_DT]"
+                      lineageId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[UPDATE_DT]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1896,6 +1903,14 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                       refId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MCC]"
                       dataType="i2"
                       name="MCC" />
+                    <externalMetadataColumn
+                      refId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[INSERT_DT]"
+                      dataType="dbTimeStamp"
+                      name="INSERT_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Dataflow Prior\Budget DB.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[UPDATE_DT]"
+                      dataType="dbTimeStamp"
+                      name="UPDATE_DT" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2506,21 +2521,9 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                       cachedName="ErrorColumn"
                       externalMetadataColumnId="Package\Dataflow Prior\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorColumn]"
                       lineageId="Package\Dataflow Prior\Prior Source CSV.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]" />
-                    <inputColumn
-                      refId="Package\Dataflow Prior\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;]"
-                      cachedCodepage="1251"
-                      cachedDataType="text"
-                      cachedName="Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;"
-                      externalMetadataColumnId="Package\Dataflow Prior\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[Error Text]"
-                      lineageId="Package\Dataflow Prior\Prior Source CSV.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Dataflow Prior\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[Error Text]"
-                      codePage="1251"
-                      dataType="text"
-                      name="Error Text" />
                     <externalMetadataColumn
                       refId="Package\Dataflow Prior\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorCode]"
                       dataType="i4"
@@ -2529,6 +2532,11 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                       refId="Package\Dataflow Prior\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorColumn]"
                       dataType="i4"
                       name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\Dataflow Prior\Source Errors.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[ErrorText]"
+                      codePage="1251"
+                      dataType="text"
+                      name="ErrorText" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2549,15 +2557,23 @@ where [refTable].[ACCOUNT_NUMBER] = ?</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
  
- C.CARD_NUMBER as "CARD_NUMBER"
+ 
+C.CARD_NUMBER as "CARD_NUMBER"
+
 
 , C.ACCNO AS "ACCOUNT_NUMBER"
 
+
 , A.ID AS "ACCOUNT_ID"
 
-, C.ID AS "CARD_ID"
-, 9999 AS "MCC"
 
+, C.ID AS "CARD_ID"
+,
+ 9999 AS "MCC"
+
+
+, GETDATE() as "INSERT_DT"
+, NULL as "UPDATE_DT" 
 
 FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO</property>
                 <property
@@ -2567,15 +2583,23 @@ FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO</property>
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT 
  
- C.CARD_NUMBER as "CARD_NUMBER"
+ 
+C.CARD_NUMBER as "CARD_NUMBER"
+
 
 , C.ACCNO AS "ACCOUNT_NUMBER"
 
+
 , A.ID AS "ACCOUNT_ID"
 
-, C.ID AS "CARD_ID"
-, 9999 AS "MCC"
 
+, C.ID AS "CARD_ID"
+,
+ 9999 AS "MCC"
+
+
+, GETDATE() as "INSERT_DT"
+, NULL as "UPDATE_DT" 
 
 FROM CARDS C JOIN ACCOUNTS A ON A.ACCOUNT_NUMBER = C.ACCNO) [refTable]
 where [refTable].[CARD_NUMBER] = ?</property>
@@ -2609,7 +2633,7 @@ where [refTable].[CARD_NUMBER] = ?</property>
                 <property
                   dataType="System.String"
                   description="Указывает, следует ли ссылаться на метаданные в формате XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CARD_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CARD_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MCC" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CARD_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_NUMBER" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACCOUNT_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CARD_ID" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MCC" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="INSERT_DT" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UPDATE_DT" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2734,6 +2758,34 @@ where [refTable].[CARD_NUMBER] = ?</property>
                           name="CopyFromReferenceColumn">MCC</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[INSERT_DT]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Копировать столбец"
+                      lineageId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[INSERT_DT]"
+                      name="INSERT_DT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn">INSERT_DT</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[UPDATE_DT]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Копировать столбец"
+                      lineageId="Package\Dataflow Prior\Уточняющий запрос.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[UPDATE_DT]"
+                      name="UPDATE_DT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn">UPDATE_DT</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2795,6 +2847,56 @@ where [refTable].[CARD_NUMBER] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Delete statements"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:DTSID="{fc24bf19-b2c2-4693-83e8-c219c50ca428}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete statements"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+          Arguments="-ExecutionPolicy Unrestricted -File delete_statements.ps1"
+          WorkingDirectory="G:\Budget\DB\banks_to_db" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Move and transform statements"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:DTSID="{B42F6B71-703B-453E-930F-64A9CB3358F1}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Move and transform statements"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+          Arguments="-ExecutionPolicy Unrestricted -File move_exec_statements.ps1"
+          WorkingDirectory="G:\Budget\DB\banks_to_db" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Run insert_expense_categ_agg_mm"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{389815E0-FF13-4187-80F1-6EE7559222A0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Run insert_expense_categ_agg_mm"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1672C1B1-BDBD-4A00-AC73-3EE5A385C764}"
+          SQLTask:SqlStatementSource="EXEC dbo.insert_expense_categ_agg_mm" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -2805,6 +2907,30 @@ where [refTable].[CARD_NUMBER] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Ограничение"
       DTS:To="Package\Dataflow MTB" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{53711276-A7C8-44A2-A169-D85ABC806C25}"
+      DTS:From="Package\Dataflow MTB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Run insert_expense_categ_agg_mm" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{A02681E4-A305-4641-ACA5-B0CBF26D9C8D}"
+      DTS:From="Package\Move and transform statements"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 2"
+      DTS:To="Package\Dataflow Prior" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{6FC63E81-F43C-4DBB-89D8-36FBC74B67DE}"
+      DTS:From="Package\Run insert_expense_categ_agg_mm"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 3"
+      DTS:To="Package\Delete statements" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
@@ -2817,29 +2943,107 @@ where [refTable].[CARD_NUMBER] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="144,41.6"
           Id="Package\Dataflow MTB"
-          TopLeft="65.5,167.1" />
+          TopLeft="343.833322273361,320.500001219114" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\Dataflow Prior"
-          TopLeft="65.5,65.5" />
+          TopLeft="344.66665557358,227.566667954657" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Delete statements"
+          TopLeft="338.333319889175,487.066670537524" />
+        <NodeLayout
+          Size="224,41.6"
+          Id="Package\Move and transform statements"
+          TopLeft="303.33332127995,124.800000991821" />
+        <NodeLayout
+          Size="248,41.6"
+          Id="Package\Run insert_expense_categ_agg_mm"
+          TopLeft="291.666655076875,396.933336487876" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Ограничение]"
-          TopLeft="137.5,107.1">
+          TopLeft="416.249988923471,269.166667954657">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,51.3333332644568"
               Start="0,0"
-              End="0,52.5">
+              End="0,43.8333332644568">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,43.8333332644568" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="415.749988675118,362.100001219114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.8333352687619"
+              Start="0,0"
+              End="0,27.3333352687619">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3333352687619" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 2]"
+          TopLeft="415.999988426765,166.400000991821">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.166666962836"
+              Start="0,0"
+              End="0,53.666666962836">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.666666962836" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 3]"
+          TopLeft="417.599987483025,438.533336487876">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.5333340496487"
+              Start="0,0"
+              End="0,41.0333340496487">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.0333340496487" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2877,6 +3081,30 @@ where [refTable].[CARD_NUMBER] = ?</property>
           Id="Package\Dataflow MTB\Accounts-Cards mapping"
           TopLeft="272.685181502207,254.296298301367" />
         <EdgeLayout
+          Id="Package\Dataflow MTB.Paths[IDs added]"
+          TopLeft="372.861104361437,295.896298301367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,103.992593606608"
+              Start="0,0"
+              End="0,96.4925936066078">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,96.4925936066078" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-23.03958984375,43.3717850845539,46.0791796875,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Dataflow MTB.Paths[Cards-Accs lookup errors]"
           TopLeft="467.885181502207,272.448149150683">
           <EdgeLayout.Curve>
@@ -2896,7 +3124,7 @@ where [refTable].[CARD_NUMBER] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="61.7556449259797,5,111.103528645833,11.609375"
+              BoundingBox="61.7556449259798,5,111.103528645833,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2919,7 +3147,9 @@ where [refTable].[CARD_NUMBER] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2943,30 +3173,6 @@ where [refTable].[CARD_NUMBER] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="95.0937377025085,5,60.566484375,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Dataflow MTB.Paths[IDs added]"
-          TopLeft="372.861104361437,295.896298301367">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,103.992593606608"
-              Start="0,0"
-              End="0,96.4925936066078">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,96.4925936066078" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-23.03958984375,43.3717850845539,46.0791796875,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3014,14 +3220,6 @@ where [refTable].[CARD_NUMBER] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\Dataflow Prior\Lookup Errors"
-          TopLeft="710,249" />
-        <NodeLayout
-          Size="160,41.6"
-          Id="Package\Dataflow Prior\Prior Source CSV"
-          TopLeft="302.857150889578,72.8952380785109" />
-        <NodeLayout
           Size="176.8,41.6"
           Id="Package\Dataflow Prior\Уточняющий запрос"
           TopLeft="287.499995728334,253.333335330751" />
@@ -3030,9 +3228,17 @@ where [refTable].[CARD_NUMBER] = ?</property>
           Id="Package\Dataflow Prior\Source Errors"
           TopLeft="710,78" />
         <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\Dataflow Prior\Lookup Errors"
+          TopLeft="710,249" />
+        <NodeLayout
           Size="128.8,41.6"
           Id="Package\Dataflow Prior\Budget DB"
           TopLeft="306.499990363916,479.333336983787" />
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Dataflow Prior\Prior Source CSV"
+          TopLeft="302.857150889578,72.8952380785109" />
         <EdgeLayout
           Id="Package\Dataflow Prior.Paths[Source errors]"
           TopLeft="462.857150889578,96.2476190392554">
@@ -3124,25 +3330,14 @@ where [refTable].[CARD_NUMBER] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dataflow Prior\Budget DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Dataflow Prior\Уточняющий запрос">
     <Properties>
@@ -3163,6 +3358,19 @@ where [refTable].[CARD_NUMBER] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dataflow Prior\Budget DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
