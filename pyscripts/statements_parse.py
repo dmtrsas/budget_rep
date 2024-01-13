@@ -105,7 +105,7 @@ def mtbstmtparse(file):
     # this is what we do for every page of input PDF file
     while page_no < num_pages:
 
-        input_page = ((pdf_read.pages[page_no]).extract_text()).split('\nTранзации')  # extract text + split into pages
+        input_page = ((pdf_read.pages[page_no]).extract_text()).split('\nTранзакции')  # extract text + split into pages
         input_page = re.split('\nT', input_page[0])  # \nT - the only adequate delimiter for splitting pages into rows
         input_page = input_page[1::]  # first row of a page (which includes service info) is not needed
 
