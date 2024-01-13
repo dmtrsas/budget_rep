@@ -11,7 +11,7 @@ if (Test-Path $Old_Prior) {Remove-Item $Old_Prior}
 if (Test-Path $Old_MTB) {Remove-Item $Old_MTB}
 
 $Move_from_prior = "c:\Users\dmitr\Downloads\Vpsk_*.csv"
-$Move_from_mtb = "c:\Users\dmitr\Downloads\Выписка_*"
+$Move_from_mtb = "c:\Users\dmitr\Downloads\Р’С‹РїРёСЃРєР°_*"
 $Move_to = 'g:\Budget\DB\banks_to_db\'
 
 Move-Item -Path $Move_from_prior -Destination $Move_to -force
