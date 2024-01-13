@@ -23,7 +23,7 @@ Setup:
 	- Change connection to **your database** for "Run insert_expense_categ_agg_mm" job
 
 How to use:
-1. Download the statements (default location - C:\Users\%username%\Downloads\)
+1. Download the statements (default location - C:\ Users \ %username% \ Downloads \)
 2. Start SSIS package execution. While executing SSIS package:
    
    2.1 old transformed statements(if there are any) will be deleted from working directory _(ps1 script)_
@@ -42,15 +42,22 @@ _________________________________________________________________
 Future development plans:
 - Stored procedures in the DB must be realized for deeper analytics of the data:
     
-	- [ ] to add type of transaction
+	- [ ] -to add type of transaction- -- not relevant as there's a txn_category column
 
-	- [ ] to add transfers info (from-to)
+	- [ ] -to add transfers info (from-to)- -- not relevant now
 
-	- [ ] ~~-to unify different MCC descriptions in transactions table~~ -- not relevant now
+	- [ ] to unify different MCC descriptions in transactions table
 
 	- [x] aggregations should be realized -- realized in insert_expense_categ_agg_mm
 - Cleansing of the data: 
-	- [ ] possibility to load statements of any period without duplicating records;
+	- [x] possibility to load statements of any period without duplicating records -- realized using hash column in dm.fct_transactions
         
 	- [ ] to unify merchant names;
-- Visualization of the results (in progress using Power BI)
+- Visualization of the results
+	- [x] overview page created with a treemap + gauges;
+	
+	- [x] eating out top merchants bar chart created;
+	
+	- [x] a dedicated page added for transactions table;
+	
+	
