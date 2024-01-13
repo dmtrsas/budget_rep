@@ -2,6 +2,7 @@ import csv
 import os
 import re
 import PyPDF2
+from hashlib import sha256
 
 def getpriorstatementslist():
     files = os.listdir(os.getcwd())
@@ -15,9 +16,9 @@ def getpriorstatementslist():
             statements_list.append(statement)
     return statements_list
 
-
+#
 def getpriorcardnumber(file):
-    with open(file) as source_csv:
+    with open(file, encoding='windows-1251') as source_csv:
         source_csv_read = csv.reader(source_csv, delimiter=';')
         for entry in source_csv_read:
             if not entry or re.search('Карта:', entry[0]) is None:
@@ -28,7 +29,7 @@ def getpriorcardnumber(file):
 
 
 def getpriorcurbill(file):
-    with open(file) as source_csv:
+    with open(file, encoding='windows-1251') as source_csv:
         source_csv_read = csv.reader(source_csv, delimiter=';')
         for entry in source_csv_read:
             if not entry or re.search('Валюта счета: ', entry[0]) is None:
@@ -39,7 +40,7 @@ def getpriorcurbill(file):
 
 
 def priorstmtparse(file, pan, curbill):
-    with open(file) as source_csv:
+    with open(file, encoding='windows-1251') as source_csv:
         source_csv_rows = list()
         for index, row in enumerate(csv.reader(source_csv, delimiter=';')):
             # every necessary row contains 10 elements in a source file
@@ -60,15 +61,23 @@ def priorstmtparse(file, pan, curbill):
                 # insert card number and billing currency
                 row.insert(-2, pan)
                 row.insert(-3, curbill)
+                # trim spaces from elements
+                row = [el.strip() for el in row]
+                # add hash value to every row (to ensure uniqueness)
+                hash_row = ''
+                for el in row:
+                    hash_row = hash_row + '|' + el
+                row.insert(-1, sha256(hash_row.encode('utf-8')).hexdigest())
+
                 # append only needed elements
-                source_csv_rows.append(row[:11:])
+                source_csv_rows.append(row[:12:])
+
             else:
                 continue
         # writing rows to a file
     with open('Prior_Result.csv', 'a') as prior_res:
         for row in source_csv_rows:
-            for elem in row:
-                elem = ";".join(elem)
+            row = [el.strip() for el in row]
             prior_res.writelines("%s\n" % str(row))
 
 
@@ -76,7 +85,7 @@ def getmtbstatementslist():
     files = os.listdir(os.getcwd())
     statements_list = []
     for i in files:
-        statement = re.match(r'transactions.{0,2}\d?.?\.pdf', i)
+        statement = re.match(r'Выписка_.*\.pdf', i)
         if statement is None:
             pass
         else:
@@ -201,21 +210,28 @@ def mtbstmtparse(file):
                 transaction_amount = '-' + transaction_amount
             elif billing_amount[-1::] == '+':
                 billing_amount = billing_amount[:-1:]
-            csv_output_string = str([transaction_date,
-                                     transaction_time,
-                                     transaction_descr,
-                                     mcc,
-                                     transaction_amount,
-                                     transaction_currency,
-                                     account_date,
-                                     account_no,
-                                     billing_amount,
-                                     billing_currency,
-                                     card_number,
-                                     transaction_category])
+            csv_output_string = [transaction_date,
+                                 transaction_time,
+                                 transaction_descr,
+                                 mcc,
+                                 transaction_amount,
+                                 transaction_currency,
+                                 account_date,
+                                 account_no,
+                                 billing_amount,
+                                 billing_currency,
+                                 card_number,
+                                 transaction_category]
+            csv_output_string = [el.strip() for el in csv_output_string]
+            # add hash value to every row (to ensure uniqueness)
+            hash_row = ''
+            for el in csv_output_string:
+                hash_row = hash_row + '|' + el
+            csv_output_string.append(sha256(hash_row.encode('utf-8')).hexdigest())
+
             # Writing to a file
             with open('MTB_Result.csv', 'a') as target_csv:
-                target_csv.write(csv_output_string)
+                target_csv.write(str(csv_output_string))
                 target_csv.write('\n')
         page_no += 1
 
@@ -224,7 +240,7 @@ with open('MTB_Result.csv', 'a') as target_csv:  # writing header to a result fi
     target_csv.writelines("%s\n" % str(
         ['Transaction date', 'Transaction time', 'Transaction description', 'MCC',
          'Transaction Amount', 'Currency', 'Account Date', 'Account Number',
-         'Billing amount', 'Billing currency', 'Card Number', 'Category']))
+         'Billing amount', 'Billing currency', 'Card Number', 'Category', 'Row Hash']))
 for filename in getmtbstatementslist():
     mtbstmtparse(filename)
 
@@ -232,6 +248,6 @@ with open('Prior_Result.csv', 'a') as target_csv:  # writing header to a result 
     target_csv.writelines("%s\n" % str(
         ['Transaction date', 'Transaction time', 'Transaction description',
          'Transaction Amount', 'Currency', 'Account Date', 'Account Number',
-         'Billing amount', 'Billing currency', 'Card Number', 'Category']))
+         'Billing amount', 'Billing currency', 'Card Number', 'Category', 'Row Hash']))
 for filename in getpriorstatementslist():
     priorstmtparse(filename, getpriorcardnumber(filename), getpriorcurbill(filename))

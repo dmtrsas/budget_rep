@@ -10,12 +10,13 @@ $Old_Prior = "G:\Budget\DB\banks_to_db\Prior_Result.csv"
 if (Test-Path $Old_Prior) {Remove-Item $Old_Prior} 
 if (Test-Path $Old_MTB) {Remove-Item $Old_MTB}
 
-$Move_from = 'c:\Users\dmitr\Downloads\Vpsk*'
+$Move_from_prior = "c:\Users\dmitr\Downloads\Vpsk_*.csv"
+$Move_from_mtb = "c:\Users\dmitr\Downloads\Выписка_*"
 $Move_to = 'g:\Budget\DB\banks_to_db\'
-Move-Item -Path $Move_from -Destination $Move_to -Force
 
-$Move_from_mtb = 'c:\Users\dmitr\Downloads\transactions*.pdf'
-Move-Item -Path $Move_from -Destination $Move_to -Force
+Move-Item -Path $Move_from_prior -Destination $Move_to -force
+Move-Item -Path $Move_from_mtb -Destination $Move_to -force
+
 
 python G:\Budget\DB\banks_to_db\statements_parse.py
 
