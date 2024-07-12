@@ -105,7 +105,7 @@ def mtbstmtparse(file):
     # this is what we do for every page of input PDF file
     while page_no < num_pages:
 
-        input_page = ((pdf_read.pages[page_no]).extract_text()).split('\nTранзакции')  # extract text + split into pages
+        input_page = ((pdf_read.pages[page_no]).extract_text()).split('\nTранзации')  # extract text + split into pages
         input_page = re.split('\nT', input_page[0])  # \nT - the only adequate delimiter for splitting pages into rows
         input_page = input_page[1::]  # first row of a page (which includes service info) is not needed
 
@@ -115,7 +115,11 @@ def mtbstmtparse(file):
 
             transaction = transaction.replace('\n', ' ')
             # we check if this is debt repayment, if yes - skip
-            if re.search('Погашение.основного.долга', transaction) is not None:
+            if re.search(r'Погашение\s', transaction) is not None \
+                    or re.search(r'Исполнение.плат[е-ё]жного.документа',
+                                 transaction) is not None \
+                    or re.search(r'Неразреш[е-ё]нный.овердрафт',
+                                 transaction) is not None:
                 txn_num += 1
             else:
                 # now we check if a real transaction was split within itself as a result of splitting pages into rows
@@ -123,7 +127,6 @@ def mtbstmtparse(file):
                 # Incorrect splitting / last entry handling
                 # if there are non-digits in last 4 - it's either real txn first part OR last txn with service info
                 if re.match(r'\d\.\d{2}', transaction[-4::]) is None:
-
                     # if this transaction is the last
                     if re.search(r'\sсумма блокирована', str(transaction)) is not None:
                         transaction = re.split(r'-\sсумма обработана', transaction)
